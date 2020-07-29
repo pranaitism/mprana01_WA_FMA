@@ -1,0 +1,112 @@
+@import 'scss/config';
+@import 'scss/variables';
+@import 'scss/font';
+@import 'scss/colors';
+@import 'scss/mixins';
+@import 'scss/pages/footer';
+@import 'scss/pages/home';
+@import 'scss/pages/books';
+@import 'scss/pages/contactus';
+@import 'scss/pages/19century';
+@import 'scss/pages/delivery';
+//Styling for all pages
+body {
+    background-color: $background-color;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#pagecontainer {
+    @include center-block;
+}
+
+h1 {
+    font-weight: lighter;
+}
+
+h2 {
+    font-family: Parisian;
+    font-weight: lighter;
+    text-decoration: underline;
+    text-decoration-color: $brand-color;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+//hEADER
+header {
+    display: inline-flex;
+    justify-content: space-between;
+    padding: $large-padding;
+    h2 {
+        position: relative;
+        text-decoration: none;
+    }
+    .img {
+        background-image: url("images/Logo/logo/emblem_logo_144.png");
+        position: fixed;
+    }
+    h2 {
+        font-family: Parisian;
+        font-weight: lighter;
+        font-size: large;
+        margin-top: 1.5rem;
+    }
+    ul {
+        @include hide-element;
+        @include desktop {
+            display: inline-flex;
+        }
+    }
+}
+
+// FOOTER
+footer {
+    background-color: $brand-color;
+    a {
+        font-weight: lighter;
+        color: $footer-links-color;
+    }
+    li {
+        @include bulletless-list;
+        margin: $small-margin;
+        @include center-text;
+    }
+    p {
+        color: $footer-links-color;
+        font-weight: lighter;
+        margin: $small-margin;
+        span {
+            font-family: Parisian;
+            font-size: large;
+        }
+    }
+}
+
+#menubutton {
+    @include bulletless-list;
+    @include no-underline-link;
+    @include center-text;
+    margin-top: 2rem;
+    color: black;
+    background-color: $menu-button-color;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    height: 80%;
+    padding: 0.1rem;
+}
+
+#navbar {
+    margin-left: 1.5rem;
+    text-align: center;
+    li {
+        margin: 0.4rem;
+        background-color: $menu-button-color;
+        border: groove;
+        a {
+            color: black;
+        }
+    }
+}

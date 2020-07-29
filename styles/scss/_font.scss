@@ -1,0 +1,12 @@
+$line-height: 1.4;
+$line-spacing: 0.2rem;
+$base-font: "Arial",
+sans-serif;
+$font-size: 1rem;
+@font-face {
+    font-family: 'Parisian';
+    src: local('../fonts/parisr.eot') format('eot');
+    src: local('../fonts/parisr.svg') format('svg');
+    src: local('../fonts/parisr.ttf') format('tff');
+    src: local('../fonts/parisr.woff') format('woff');
+}

@@ -1,0 +1,131 @@
+// Styling for all pages
+// hearder
+p {
+    width: 90%;
+}
+
+#navbar {
+    ul {
+        li {
+            @include block-elem;
+            margin-left: 1.5rem;
+            & :hover {
+                color: grey;
+            }
+            ul {
+                li {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+#homegridcontainer {
+    figure {
+        img {
+            width: 100%;
+            height: auto;
+            padding: $large-padding;
+        }
+    }
+    .main-home {
+        h1 {
+            margin: $small-margin;
+        }
+        h2 {
+            margin: $small-margin;
+        }
+        P {
+            margin: $small-margin;
+        }
+        ul {
+            margin-left: 2.5rem;
+            li {
+                width: 90%;
+                height: auto;
+            }
+        }
+    }
+    header {
+        grid-area: header;
+    }
+    .main-picture {
+        grid-area: main-picture;
+    }
+    #navbar {
+        grid-area: navbar;
+    }
+    .main-home {
+        grid-area: main-home;
+    }
+    .media {
+        grid-area: media;
+    }
+    .sidebar {
+        grid-area: sidebar;
+    }
+    footer {
+        grid-area: footer;
+    }
+    @include mobile {
+        @include single-column-grid;
+        grid-template-areas: "header" "main-picture" "main-home" "media" "sidebar" "navbar" "footer";
+        grid-gap: 1rem;
+        .media {
+            h2 {
+                margin-left: 1rem;
+            }
+            video {
+                width: 100%;
+                height: auto;
+                padding: 1rem;
+            }
+        }
+        .sidebar {
+            margin-left: 1rem;
+            .sidebar-feature2 {
+                margin-top: 1rem;
+                figure {
+                    img {
+                        max-width: 70%;
+                        height: auto;
+                        mix-blend-mode: darken;
+                    }
+                }
+            }
+        }
+    }
+    @include tablet {
+        @include two-column-grid;
+        grid-template-areas: "header header" "main-picture main-picture" "main-home main-home" "media sidebar" "navbar navbar" "footer footer";
+        .main-home {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            .selling {
+                width: 50%;
+            }
+            .buying {
+                width: 50%;
+            }
+            .valuing {
+                width: 50%;
+            }
+        }
+    }
+    @include desktop {
+        @include three-column-grid;
+        grid-template-areas: "header header header" "navbar main-picture main-picture" "media media media " "main-home main-home sidebar" "main-home main-home sidebar" "footer footer footer";
+        .media {
+            h2 {
+                margin-left: 1rem;
+            }
+            video {
+                width: 100%;
+                height: auto;
+                padding: 1rem;
+            }
+        }
+    }
+}

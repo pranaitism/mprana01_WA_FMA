@@ -1,0 +1,70 @@
+@mixin no-underline-link {
+    text-decoration: none;
+}
+
+@mixin set-container-width ($number) {
+    width: $number;
+}
+
+@mixin bulletless-list {
+    list-style: none;
+}
+
+@mixin no-underline-link {
+    text-decoration: none;
+}
+
+@mixin hide-element {
+    display: none
+}
+
+@mixin block-elem {
+    display: block;
+}
+
+@mixin inline-block-elem {
+    display: inline-block;
+}
+
+@mixin center-block {
+    margin: 0 auto;
+}
+
+@mixin center-text {
+    text-align: center;
+}
+
+// grid 
+@mixin single-column-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@mixin two-column-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@mixin three-column-grid {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr 1fr;
+}
+
+// media queries
+@mixin mobile {
+    @media screen and (max-width: $phone-width) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and(min-width: $desktop-width) {
+        @content;
+    }
+}

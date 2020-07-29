@@ -1,0 +1,100 @@
+$phone-width:600px;
+$tablet-width: 601px;
+$desktop-width: 1024px;
+main {
+    p {
+        width: 85%;
+    }
+}
+
+@media screen and(max-width: #{$phone-width}) {
+    #booksgirdcontainer {
+        @include single-column-grid;
+        grid-template-areas: "header" "main" "navbar" "footer";
+        grid-gap: 1rem;
+    }
+    header {
+        grid-template-areas: header;
+    }
+    main {
+        p {
+            width: 85%;
+            @include center-block;
+        }
+        .pictures {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            figure {
+                min-width: 50%;
+                height: auto;
+                figcaption {
+                    text-align: center;
+                }
+            }
+        }
+        grid-area: main;
+    }
+    footer {
+        grid-area: footer;
+    }
+    #navbar {
+        @include center-block;
+        grid-area: navbar;
+    }
+}
+
+@media (min-width: #{$tablet-width}) {
+    #booksgirdcontainer {
+        @include two-column-grid;
+        grid-template-areas: "header header" "main main" "navbar navbar" "footer footer";
+        grid-gap: 1rem;
+    }
+    .header {
+        width: 100%;
+        grid-template-areas: header;
+    }
+    main {
+        grid-area: main;
+    }
+    .pictures {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    footer {
+        grid-area: footer;
+    }
+    #navbar {
+        grid-area: navbar;
+    }
+}
+
+@media screen and (min-width: #{$desktop-width}) {
+    #booksgirdcontainer {
+        @include three-column-grid;
+        grid-template-areas: " header header header" "navbar main main" "main main main" "footer footer footer";
+        grid-gap: 1rem;
+        justify-content: space-evenly;
+    }
+    header {
+        ul {
+            display: inline-block;
+        }
+        grid-area: header;
+    }
+    #menubutton {
+        display: none;
+    }
+    main {
+        grid-area: main;
+    }
+    .pictures {
+        display: inline-flex;
+        justify-content: space-between;
+    }
+    footer {
+        grid-area: footer;
+    }
+}

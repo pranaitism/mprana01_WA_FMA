@@ -1,0 +1,27 @@
+/* table */
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #000;
+    width: 60%;
+    text-align: center;
+}
+
+th,
+td {
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+}
+
+caption {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+th {
+    background-color: #a6a7a8;
+}
+
+tr:first-child {
+    background-color: #a6a7a8;
+}
