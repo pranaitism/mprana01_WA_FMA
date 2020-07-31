@@ -94,6 +94,11 @@ p {
         grid-template-areas: "header" "main-picture" "main-home" "media" "sidebar" "navbar" "footer";
     grid-gap: 1rem;
   }
+  #homegridcontainer header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+  }
   #homegridcontainer .media h2 {
     margin-left: 1rem;
   }
@@ -105,12 +110,13 @@ p {
   #homegridcontainer .sidebar {
     margin-left: 1rem;
   }
+  #homegridcontainer .sidebar img {
+    max-width: 70%;
+  }
   #homegridcontainer .sidebar .sidebar-feature2 {
     margin-top: 1rem;
   }
   #homegridcontainer .sidebar .sidebar-feature2 figure img {
-    max-width: 70%;
-    height: auto;
     mix-blend-mode: darken;
   }
 }
@@ -543,12 +549,14 @@ footer p span {
 }
 
 #navbar {
+  width: 90%;
   margin-left: 1.5rem;
   text-align: center;
 }
 
 #navbar li {
   margin: 0.4rem;
+  padding: 0.5rem;
   background-color: #6D7B42;
   border: groove;
 }

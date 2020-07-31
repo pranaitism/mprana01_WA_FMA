@@ -72,6 +72,13 @@ p {
         @include single-column-grid;
         grid-template-areas: "header" "main-picture" "main-home" "media" "sidebar" "navbar" "footer";
         grid-gap: 1rem;
+        header {
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 600;
+                position: relative;
+            }
+        }
         .media {
             h2 {
                 margin-left: 1rem;
@@ -83,13 +90,14 @@ p {
             }
         }
         .sidebar {
+            img {
+                max-width: 70%;
+            }
             margin-left: 1rem;
             .sidebar-feature2 {
                 margin-top: 1rem;
                 figure {
                     img {
-                        max-width: 70%;
-                        height: auto;
                         mix-blend-mode: darken;
                     }
                 }
