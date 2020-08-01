@@ -154,8 +154,8 @@ p {
   #homegridcontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.4fr 1fr 1fr;
-        grid-template-columns: 0.4fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "header header header" "navbar main-picture main-picture" "media media media " "main-home main-home sidebar" "main-home main-home sidebar" "footer footer footer";
   }
   #homegridcontainer .media h2 {
@@ -275,8 +275,8 @@ main p {
   #booksgirdcontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.4fr 1fr 1fr;
-        grid-template-columns: 0.4fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: " header header header" "navbar main main" "main main main" "footer footer footer";
     grid-gap: 1rem;
     -webkit-box-pack: space-evenly;
@@ -417,12 +417,16 @@ fieldset {
   }
 }
 
-/* table */
 table {
   border-collapse: collapse;
   border: 1px solid #000;
   width: 60%;
   text-align: center;
+  margin: 0 auto;
+}
+
+P {
+  margin: 0 auto;
 }
 
 th,
@@ -442,6 +446,53 @@ th {
 
 tr:first-child {
   background-color: #a6a7a8;
+}
+
+#deliverycontainer main {
+  grid-area: main;
+}
+
+@media screen and (max-width: 600px) {
+  #deliverycontainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "header" "main" "navbar" "footer";
+    grid-gap: 1rem;
+  }
+  #deliverycontainer table tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  #deliverycontainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "header header" "main main" "navbar navbar" "footer footer ";
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #deliverycontainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "header header header" "navbar navbar navbar" "main main main" "footer footer footer";
+  }
+  #deliverycontainer table tr {
+    display: table;
+  }
 }
 
 body {
