@@ -58,6 +58,13 @@ header {
         @include hide-element;
         @include desktop {
             display: inline-flex;
+            @include bulletless-list;
+            li {
+                padding: 1rem;
+                a {
+                    color: $brand-color;
+                }
+            }
         }
     }
 }
@@ -100,15 +107,35 @@ footer {
 
 #navbar {
     width: 90%;
-    margin-left: 1.5rem;
     text-align: center;
-    li {
-        margin: 0.4rem;
-        padding: 0.5rem;
-        background-color: $menu-button-color;
-        border: groove;
-        a {
-            color: black;
+    ul {
+        li {
+            margin: 0.4rem;
+            padding: 0.5rem;
+            background-color: $menu-button-color;
+            border: groove;
+            @include block-elem;
+            margin-left: 1.5rem;
+            & :hover {
+                color: $footer-links-color;
+            }
+            a {
+                color: black;
+                display: block;
+            }
+            ul {
+                visibility: hidden;
+                display: none;
+            }
         }
+    }
+    ul li:hover>ul,
+    ul li ul:visited {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+    ul li ul li {
+        width: 90%;
     }
 }

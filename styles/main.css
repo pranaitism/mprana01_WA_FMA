@@ -17,19 +17,6 @@ p {
   width: 90%;
 }
 
-#navbar ul li {
-  display: block;
-  margin-left: 1.5rem;
-}
-
-#navbar ul li :hover {
-  color: grey;
-}
-
-#navbar ul li ul li {
-  display: none;
-}
-
 #homegridcontainer figure img {
   width: 100%;
   height: auto;
@@ -417,7 +404,11 @@ fieldset {
   }
 }
 
-table {
+#deliverycontainer P {
+  margin: 0 auto;
+}
+
+#deliverycontainer table {
   border-collapse: collapse;
   border: 1px solid #000;
   width: 60%;
@@ -425,31 +416,39 @@ table {
   margin: 0 auto;
 }
 
-P {
-  margin: 0 auto;
-}
-
-th,
-td {
+#deliverycontainer th,
+#deliverycontainer td {
   padding: 0.5rem 1rem;
   border: 1px solid #000;
 }
 
-caption {
+#deliverycontainer caption {
   font-size: 0.85rem;
   margin-bottom: 0.5rem;
 }
 
-th {
+#deliverycontainer th {
   background-color: #a6a7a8;
 }
 
-tr:first-child {
+#deliverycontainer tr:first-child {
   background-color: #a6a7a8;
+}
+
+#deliverycontainer header {
+  grid-area: header;
+}
+
+#deliverycontainer #navbar {
+  grid-area: navbar;
 }
 
 #deliverycontainer main {
   grid-area: main;
+}
+
+#deliverycontainer footer {
+  grid-area: footer;
 }
 
 @media screen and (max-width: 600px) {
@@ -489,9 +488,6 @@ tr:first-child {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "header header header" "navbar navbar navbar" "main main main" "footer footer footer";
-  }
-  #deliverycontainer table tr {
-    display: table;
   }
 }
 
@@ -557,6 +553,13 @@ header ul {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    list-style: none;
+  }
+  header ul li {
+    padding: 1rem;
+  }
+  header ul li a {
+    color: #236841;
   }
 }
 
@@ -601,18 +604,40 @@ footer p span {
 
 #navbar {
   width: 90%;
-  margin-left: 1.5rem;
   text-align: center;
 }
 
-#navbar li {
+#navbar ul li {
   margin: 0.4rem;
   padding: 0.5rem;
   background-color: #6D7B42;
   border: groove;
+  display: block;
+  margin-left: 1.5rem;
 }
 
-#navbar li a {
+#navbar ul li :hover {
+  color: #FFFFFF;
+}
+
+#navbar ul li a {
   color: black;
+  display: block;
+}
+
+#navbar ul li ul {
+  visibility: hidden;
+  display: none;
+}
+
+#navbar ul li:hover > ul,
+#navbar ul li ul:visited {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+#navbar ul li ul li {
+  width: 90%;
 }
 /*# sourceMappingURL=main.css.map */

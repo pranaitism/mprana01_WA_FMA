@@ -4,23 +4,6 @@ p {
     width: 90%;
 }
 
-#navbar {
-    ul {
-        li {
-            @include block-elem;
-            margin-left: 1.5rem;
-            & :hover {
-                color: grey;
-            }
-            ul {
-                li {
-                    display: none;
-                }
-            }
-        }
-    }
-}
-
 #homegridcontainer {
     figure {
         img {
