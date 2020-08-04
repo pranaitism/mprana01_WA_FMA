@@ -313,51 +313,6 @@ form {
   margin: 0 auto;
 }
 
-form {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: (auto)[4];
-      grid-template-rows: repeat(4, auto);
-      grid-template-areas: "contact" "interest" "extra1" "extra2" "submit";
-  grid-gap: 0.8rem 0.4rem;
-  background: #EEE;
-  padding: 1rem;
-  border: 2px solid #7E7E7E;
-  margin-bottom: 2rem;
-}
-
-#contact {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: contact;
-}
-
-#interest {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: interest;
-}
-
-#extra1 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: extra1;
-}
-
-#extra2 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: extra2;
-}
-
-#submit {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  grid-area: submit;
-}
-
 label {
   display: block;
 }
@@ -368,7 +323,7 @@ textarea {
 }
 
 button {
-  background: #444;
+  background: #236841;
   color: #FFF;
   padding: 1rem;
 }
@@ -393,8 +348,102 @@ fieldset {
   border: 1px solid #A8A8A8;
 }
 
-@media (min-width: 1024px) {
-  form {
+#contact {
+  grid-area: contact;
+}
+
+#interest {
+  grid-area: interest;
+}
+
+#extra1 {
+  grid-area: extra1;
+}
+
+#extra2 {
+  grid-area: extra2;
+}
+
+#submit {
+  grid-area: submit;
+}
+
+#contactgridcontainer header {
+  grid-area: header;
+}
+
+#contactgridcontainer #navbar {
+  grid-area: navbar;
+}
+
+#contactgridcontainer form {
+  grid-area: form;
+}
+
+#contactgridcontainer footer {
+  grid-area: footer;
+}
+
+@media screen and (max-width: 600px) {
+  #contactgridcontainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "header" "main" "navbar" "footer";
+    grid-gap: 1rem;
+  }
+  #contactgridcontainer form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (auto)[4];
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "contact" "interest" "extra1" "extra2" "submit";
+    grid-gap: 0.8rem 0.4rem;
+    background: #EEE;
+    padding: 1rem;
+    border: 2px solid #7E7E7E;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  #contactgridcontainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "header header" "main main" "navbar navbar" "footer footer";
+    grid-gap: 1rem;
+  }
+  #contactgridcontainer form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (auto)[4];
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "contact" "interest" "extra1" "extra2" "submit";
+    grid-gap: 0.8rem 0.6rem;
+    background: #EEE;
+    padding: 1rem;
+    border: 2px solid #7E7E7E;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #contactgridcontainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "header header header" "navbar main main" "footer footer footer";
+    grid-gap: 1rem;
+  }
+  #contactgridcontainer form {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
