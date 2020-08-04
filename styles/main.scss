@@ -110,6 +110,13 @@ footer {
     text-align: center;
     ul {
         li {
+            &:hover {
+                >ul {
+                    visibility: visible;
+                    opacity: 1;
+                    display: block;
+                }
+            }
             margin: 0.4rem;
             padding: 0.5rem;
             background-color: $menu-button-color;
@@ -124,18 +131,16 @@ footer {
                 display: block;
             }
             ul {
-                visibility: hidden;
                 display: none;
+                &:hover {
+                    visibility: visible;
+                    opacity: 1;
+                    display: block;
+                }
+                li {
+                    width: 90%;
+                }
             }
         }
-    }
-    ul li:hover>ul,
-    ul li ul:visited {
-        visibility: visible;
-        opacity: 1;
-        display: block;
-    }
-    ul li ul li {
-        width: 90%;
     }
 }

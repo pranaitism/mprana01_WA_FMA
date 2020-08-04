@@ -668,6 +668,12 @@ footer p span {
   margin-left: 1.5rem;
 }
 
+#navbar ul li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
 #navbar ul li :hover {
   color: #FFFFFF;
 }
@@ -678,12 +684,10 @@ footer p span {
 }
 
 #navbar ul li ul {
-  visibility: hidden;
   display: none;
 }
 
-#navbar ul li:hover > ul,
-#navbar ul li ul:visited {
+#navbar ul li ul:hover {
   visibility: visible;
   opacity: 1;
   display: block;
