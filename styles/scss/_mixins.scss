@@ -34,6 +34,13 @@
     text-align: center;
 }
 
+// darken images
+@mixin img-darken {
+    img {
+        mix-blend-mode: darken;
+    }
+}
+
 // grid 
 @mixin single-column-grid {
     display: grid;

@@ -1,125 +1,111 @@
-  p {
-      width: 90%;
-  }
-  
-  #homegridcontainer {
-      figure {
-          img {
-              width: 100%;
-              height: auto;
-              padding: $large-padding;
-          }
-      }
-      .main-home {
-          h1 {
-              margin: $small-margin;
-          }
-          h2 {
-              margin: $small-margin;
-          }
-          P {
-              margin: $small-margin;
-          }
-          ul {
-              margin-left: 2rem;
-              li {
-                  width: 90%;
-              }
-          }
-      }
-      header {
-          grid-area: header;
-      }
-      .main-picture {
-          grid-area: main-picture;
-      }
-      #navbar {
-          grid-area: navbar;
-      }
-      .main-home {
-          grid-area: main-home;
-      }
-      .media {
-          grid-area: media;
-      }
-      .sidebar {
-          grid-area: sidebar;
-      }
-      footer {
-          grid-area: footer;
-      }
-      @include mobile {
-          @include single-column-grid;
-          grid-template-areas: "header" "main-picture" "main-home" "media" "sidebar" "navbar" "footer";
-          grid-gap: 1rem;
-          header {
-              h2 {
-                  font-size: 1.5rem;
-                  font-weight: 600;
-                  position: relative;
-              }
-          }
-          .media {
-              h2 {
-                  margin-left: 1rem;
-              }
-              video {
-                  width: 100%;
-                  height: auto;
-                  padding: 1rem;
-              }
-          }
-          .sidebar {
-              img {
-                  max-width: 45%;
-              }
-              margin-left: 1rem;
-              .sidebar-feature2 {
-                  margin-top: 1rem;
-                  figure {
-                      img {
-                          mix-blend-mode: darken;
-                      }
-                  }
-              }
-          }
-      }
-      @include tablet {
-          @include two-column-grid;
-          grid-template-areas: "header header" "main-picture main-picture" "main-home main-home" "media sidebar" "navbar navbar" "footer footer";
-          grid-gap: 1rem;
-          .main-home {
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              .selling {
-                  width: 50%;
-              }
-              .buying {
-                  width: 50%;
-              }
-              .valuing {
-                  width: 50%;
-              }
-          }
-          .sidebar {
-              img {
-                  max-width: 60%;
-              }
-          }
-      }
-      @include desktop {
-          @include three-column-grid;
-          grid-template-areas: "header header header" "navbar main-picture main-picture" "media media media " "main-home main-home sidebar" "main-home main-home sidebar" "footer footer footer";
-          .media {
-              h2 {
-                  margin-left: 1rem;
-              }
-              video {
-                  width: 100%;
-                  height: auto;
-                  padding: 1rem;
-              }
-          }
-      }
-  }
+p {
+    width: 90%;
+}
+
+#homegridcontainer {
+    figure {
+        img {
+            width: 100%;
+            height: auto;
+            padding: $large-padding;
+        }
+    }
+    .main {
+        h1 {
+            margin: $small-margin;
+        }
+        h2 {
+            margin: $small-margin;
+        }
+        P {
+            margin: $small-margin;
+        }
+        ul {
+            margin-left: 2rem;
+            li {
+                width: 90%;
+            }
+        }
+        .media {
+            width: 95%;
+            height: auto;
+            margin-left: 0.5rem;
+        }
+    }
+    header {
+        grid-area: header;
+    }
+    .main-picture {
+        grid-area: main-picture;
+    }
+    #navbar {
+        grid-area: navbar;
+    }
+    .main {
+        grid-area: main;
+    }
+    .sidebar {
+        grid-area: sidebar;
+    }
+    footer {
+        grid-area: footer;
+    }
+    @include mobile {
+        @include single-column-grid;
+        grid-template-areas: "header" "main-picture" "main" "sidebar" "navbar" "footer";
+        grid-gap: 1rem;
+        header {
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+        }
+        .sidebar {
+            figure {
+                max-width: 40%;
+                @include img-darken;
+            }
+            .sidebar-feature1 {
+                margin-top: $small-margin;
+            }
+            margin-left: $small-margin;
+            .sidebar-feature2 {
+                margin-top: 1rem;
+            }
+        }
+    }
+    @include tablet {
+        @include two-column-grid;
+        grid-template-areas: "header header" "main-picture main-picture" "main main" "sidebar sidebar" "navbar navbar" "footer footer";
+        grid-gap: 1rem;
+        .main-picture {
+            width: 95%;
+            @include center-block;
+        }
+        main {
+            @include center-block;
+        }
+        .sidebar {
+            figure {
+                @include img-darken;
+                img {
+                    width: 45%;
+                }
+            }
+        }
+    }
+    @include desktop {
+        @include three-column-grid;
+        grid-template-areas: "header header header" "navbar main-picture main-picture" "main main sidebar" "main main sidebar" "footer footer footer";
+        .media {
+            h2 {
+                margin-left: 1rem;
+            }
+            video {
+                width: 100%;
+                height: auto;
+                padding: 1rem;
+            }
+        }
+    }
+}

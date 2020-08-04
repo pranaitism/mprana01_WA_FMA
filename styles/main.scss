@@ -103,10 +103,13 @@ footer {
     border-radius: 0.2rem;
     height: 80%;
     padding: 0.1rem;
+    a:hover {
+        background: $link-hover-bg;
+    }
 }
 
 #navbar {
-    width: 90%;
+    width: 65%;
     text-align: center;
     ul {
         li {
@@ -115,6 +118,7 @@ footer {
                     visibility: visible;
                     opacity: 1;
                     display: block;
+                    background: $background-color;
                 }
             }
             margin: 0.4rem;

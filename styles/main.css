@@ -23,24 +23,30 @@ p {
   padding: 1rem;
 }
 
-#homegridcontainer .main-home h1 {
+#homegridcontainer .main h1 {
   margin: 1rem;
 }
 
-#homegridcontainer .main-home h2 {
+#homegridcontainer .main h2 {
   margin: 1rem;
 }
 
-#homegridcontainer .main-home P {
+#homegridcontainer .main P {
   margin: 1rem;
 }
 
-#homegridcontainer .main-home ul {
+#homegridcontainer .main ul {
   margin-left: 2rem;
 }
 
-#homegridcontainer .main-home ul li {
+#homegridcontainer .main ul li {
   width: 90%;
+}
+
+#homegridcontainer .main .media {
+  width: 95%;
+  height: auto;
+  margin-left: 0.5rem;
 }
 
 #homegridcontainer header {
@@ -55,12 +61,8 @@ p {
   grid-area: navbar;
 }
 
-#homegridcontainer .main-home {
-  grid-area: main-home;
-}
-
-#homegridcontainer .media {
-  grid-area: media;
+#homegridcontainer .main {
+  grid-area: main;
 }
 
 #homegridcontainer .sidebar {
@@ -77,33 +79,27 @@ p {
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: "header" "main-picture" "main-home" "media" "sidebar" "navbar" "footer";
+        grid-template-areas: "header" "main-picture" "main" "sidebar" "navbar" "footer";
     grid-gap: 1rem;
   }
   #homegridcontainer header h2 {
     font-size: 1.5rem;
-    font-weight: 600;
-    position: relative;
-  }
-  #homegridcontainer .media h2 {
-    margin-left: 1rem;
-  }
-  #homegridcontainer .media video {
-    width: 100%;
-    height: auto;
-    padding: 1rem;
+    font-weight: 500;
   }
   #homegridcontainer .sidebar {
     margin-left: 1rem;
   }
-  #homegridcontainer .sidebar img {
-    max-width: 45%;
+  #homegridcontainer .sidebar figure {
+    max-width: 40%;
+  }
+  #homegridcontainer .sidebar figure img {
+    mix-blend-mode: darken;
+  }
+  #homegridcontainer .sidebar .sidebar-feature1 {
+    margin-top: 1rem;
   }
   #homegridcontainer .sidebar .sidebar-feature2 {
     margin-top: 1rem;
-  }
-  #homegridcontainer .sidebar .sidebar-feature2 figure img {
-    mix-blend-mode: darken;
   }
 }
 
@@ -113,30 +109,21 @@ p {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "header header" "main-picture main-picture" "main-home main-home" "media sidebar" "navbar navbar" "footer footer";
+        grid-template-areas: "header header" "main-picture main-picture" "main main" "sidebar sidebar" "navbar navbar" "footer footer";
     grid-gap: 1rem;
   }
-  #homegridcontainer .main-home {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  #homegridcontainer .main-picture {
+    width: 95%;
+    margin: 0 auto;
   }
-  #homegridcontainer .main-home .selling {
-    width: 50%;
+  #homegridcontainer main {
+    margin: 0 auto;
   }
-  #homegridcontainer .main-home .buying {
-    width: 50%;
+  #homegridcontainer .sidebar figure img {
+    mix-blend-mode: darken;
   }
-  #homegridcontainer .main-home .valuing {
-    width: 50%;
-  }
-  #homegridcontainer .sidebar img {
-    max-width: 60%;
+  #homegridcontainer .sidebar figure img {
+    width: 45%;
   }
 }
 
@@ -146,7 +133,7 @@ p {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "header header header" "navbar main-picture main-picture" "media media media " "main-home main-home sidebar" "main-home main-home sidebar" "footer footer footer";
+        grid-template-areas: "header header header" "navbar main-picture main-picture" "main main sidebar" "main main sidebar" "footer footer footer";
   }
   #homegridcontainer .media h2 {
     margin-left: 1rem;
@@ -654,8 +641,12 @@ footer p span {
   padding: 0.1rem;
 }
 
+#menubutton a:hover {
+  background: #CECACA;
+}
+
 #navbar {
-  width: 90%;
+  width: 65%;
   text-align: center;
 }
 
@@ -672,6 +663,7 @@ footer p span {
   visibility: visible;
   opacity: 1;
   display: block;
+  background: #E6DDCD;
 }
 
 #navbar ul li :hover {
