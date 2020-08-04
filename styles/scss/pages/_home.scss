@@ -1,5 +1,5 @@
-// Styling for all pages
-// hearder
+  
+
 p {
     width: 90%;
 }
@@ -23,10 +23,10 @@ p {
             margin: $small-margin;
         }
         ul {
-            margin-left: 2.5rem;
+            margin-left: 2rem;
             li {
                 width: 90%;
-                height: auto;
+
             }
         }
     }
@@ -74,7 +74,7 @@ p {
         }
         .sidebar {
             img {
-                max-width: 55%;
+                max-width: 45%;
             }
             margin-left: 1rem;
             .sidebar-feature2 {
@@ -90,10 +90,11 @@ p {
     @include tablet {
         @include two-column-grid;
         grid-template-areas: "header header" "main-picture main-picture" "main-home main-home" "media sidebar" "navbar navbar" "footer footer";
+        grid-gap: 1rem;
         .main-home {
             width: 100%;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             .selling {
                 width: 50%;
             }
@@ -102,6 +103,12 @@ p {
             }
             .valuing {
                 width: 50%;
+            }
+        }
+        .sidebar{
+            
+            img{
+                max-width: 60%;
             }
         }
     }

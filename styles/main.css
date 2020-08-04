@@ -36,12 +36,11 @@ p {
 }
 
 #homegridcontainer .main-home ul {
-  margin-left: 2.5rem;
+  margin-left: 2rem;
 }
 
 #homegridcontainer .main-home ul li {
   width: 90%;
-  height: auto;
 }
 
 #homegridcontainer header {
@@ -98,7 +97,7 @@ p {
     margin-left: 1rem;
   }
   #homegridcontainer .sidebar img {
-    max-width: 55%;
+    max-width: 45%;
   }
   #homegridcontainer .sidebar .sidebar-feature2 {
     margin-top: 1rem;
@@ -115,16 +114,17 @@ p {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "header header" "main-picture main-picture" "main-home main-home" "media sidebar" "navbar navbar" "footer footer";
+    grid-gap: 1rem;
   }
   #homegridcontainer .main-home {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #homegridcontainer .main-home .selling {
     width: 50%;
@@ -134,6 +134,9 @@ p {
   }
   #homegridcontainer .main-home .valuing {
     width: 50%;
+  }
+  #homegridcontainer .sidebar img {
+    max-width: 60%;
   }
 }
 
