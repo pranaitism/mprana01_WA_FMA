@@ -54,12 +54,6 @@ p {
         @include single-column-grid;
         grid-template-areas: "header" "main-picture" "main" "sidebar" "navbar" "footer";
         grid-gap: 1rem;
-        header {
-            h2 {
-                font-size: 1.5rem;
-                font-weight: 500;
-            }
-        }
         .sidebar {
             figure {
                 max-width: 40%;
@@ -67,10 +61,15 @@ p {
             }
             .sidebar-feature1 {
                 margin-top: $small-margin;
+                margin-left: $small-margin;
+                h3 {
+                    margin-bottom: $small-margin;
+                }
             }
             margin-left: $small-margin;
             .sidebar-feature2 {
                 margin-top: 1rem;
+                margin-left: $small-margin;
             }
         }
     }
@@ -99,7 +98,7 @@ p {
         grid-template-areas: "header header header" "navbar main-picture main-picture" "main main sidebar" "main main sidebar" "footer footer footer";
         .media {
             h2 {
-                margin-left: 1rem;
+                margin-left: $small-margin;
             }
             video {
                 width: 100%;
