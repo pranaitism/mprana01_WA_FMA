@@ -115,16 +115,32 @@ p {
   }
   #homegridcontainer .main-picture {
     width: 95%;
+    height: auto;
     margin: 0 auto;
   }
-  #homegridcontainer main {
-    margin: 0 auto;
+  #homegridcontainer .main-content .media {
+    margin-left: 2rem;
+    max-width: 90%;
+    height: auto;
+  }
+  #homegridcontainer .main-content .selling {
+    margin-left: 2rem;
+  }
+  #homegridcontainer .buying {
+    margin-left: 2rem;
+  }
+  #homegridcontainer .valuing {
+    margin-left: 2rem;
+  }
+  #homegridcontainer .sidebar {
+    margin-left: 2rem;
   }
   #homegridcontainer .sidebar figure img {
     mix-blend-mode: darken;
   }
   #homegridcontainer .sidebar figure img {
-    width: 45%;
+    max-width: 30%;
+    height: auto;
   }
 }
 
@@ -143,6 +159,10 @@ p {
     width: 100%;
     height: auto;
     padding: 1rem;
+  }
+  #homegridcontainer .sidebar {
+    width: 90%;
+    margin-top: 2rem;
   }
 }
 
