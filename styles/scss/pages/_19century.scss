@@ -1,22 +1,49 @@
+#19ctgridcontainer {
 
-#19ctgridcontainer{
-   
-    header{
+    header {
         grid-area: header;
     }
 
-    #navbar{
+    #navbar {
         grid-area: navbar;
     }
 
-    footer{
+    footer {
         grid-area: footer;
     }
 
-    main{
-        grid-area: main;
+    .booksgalery {
+        grid-area: booksgalery;
     }
 
-    
+    .galeryitem1 {
+        grid-area: galeryitem1;
+    }
+
+    .galeryitem2 {
+        grid-area: galeryitem1;
+
+    }
+
+    .galeryitem3 {
+        grid-area: galeryitem1;
+    }
+
+    .galeryitem4 {
+        grid-area: galeryitem1;
+    }
+
+    .galeryitem5 {
+        grid-area: galeryitem1;
+    }
+
+    .galeryitem6 {
+        grid-area: galeryitem1;
+    }
+
+    .galeryitem7 {
+        grid-area: galeryitem1;
+    }
+
 
 }

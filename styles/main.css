@@ -476,8 +476,36 @@ fieldset {
   grid-area: footer;
 }
 
-#19ctgridcontainer main {
-  grid-area: main;
+#19ctgridcontainer .booksgalery {
+  grid-area: booksgalery;
+}
+
+#19ctgridcontainer .galeryitem1 {
+  grid-area: galeryitem1;
+}
+
+#19ctgridcontainer .galeryitem2 {
+  grid-area: galeryitem1;
+}
+
+#19ctgridcontainer .galeryitem3 {
+  grid-area: galeryitem1;
+}
+
+#19ctgridcontainer .galeryitem4 {
+  grid-area: galeryitem1;
+}
+
+#19ctgridcontainer .galeryitem5 {
+  grid-area: galeryitem1;
+}
+
+#19ctgridcontainer .galeryitem6 {
+  grid-area: galeryitem1;
+}
+
+#19ctgridcontainer .galeryitem7 {
+  grid-area: galeryitem1;
 }
 
 #deliverycontainer P {
