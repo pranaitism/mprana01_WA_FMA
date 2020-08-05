@@ -1,70 +1,57 @@
-#deliverycontainer {
-    P {
-        @include center-block;
-    }
-    table {
-        border-collapse: collapse;
-        border: 1px solid #000;
-        width: 60%;
-        text-align: center;
-        @include center-block;
-    }
-    th,
-    td {
-        padding: 0.5rem 1rem;
-        border: 1px solid #000;
-    }
-    caption {
-        font-size: 0.85rem;
-        margin-bottom: 0.5rem;
-    }
-    th {
-        background-color: #a6a7a8;
-    }
-    tr:first-child {
-        background-color: #a6a7a8;
-    }
-    header {
-        grid-area: header;
-    }
-    #navbar {
-        grid-area: navbar;
-    }
-    main {
-        grid-area: main;
-    }
-    footer {
-        grid-area: footer;
-    }
-    @include mobile {
-        @include single-column-grid;
-        grid-template-areas: "header" "main" "navbar" "footer";
-        grid-gap: 1rem;
-        table {
-            tr {
-                display: flex;
-                flex-direction: column;
+        #deliverycontainer {
+            table {
+                border-collapse: collapse;
+                border: 1px solid #000;
+                width: 60%;
+                text-align: center;
+                margin-left: $small-margin;
+            }
+            th,
+            td {
+                border: 1px solid #000;
+            }
+            caption {
+                font-size: 1.2rem;
+                margin-bottom: $small-margin/2;
+            }
+            th {
+                background-color: $table-bg;
+            }
+            tr:first-child {
+                background-color: $table-bg;
+            }
+            header {
+                grid-area: header;
+            }
+            #navbar {
+                grid-area: navbar;
+            }
+            main {
+                .deliveryinfo {
+                    margin-top: $small-margin;
+                    margin-left: $small-margin;
+                }
+            }
+            footer {
+                grid-area: footer;
+            }
+            @include mobile {
+                @include single-column-grid;
+                grid-template-areas: "header" "main" "navbar" "footer";
+                grid-gap: 1rem;
+            }
+            @include tablet {
+                @include two-column-grid;
+                grid-template-areas: "header header" "main main" "navbar navbar" "footer footer ";
+                td {
+                    padding: $small-padding $small-padding*2;
+                }
+            }
+            @include desktop {
+                @include three-column-grid;
+                grid-template-areas: "header header header" "navbar main main" "footer footer footer";
+                td {
+                    padding: $small-padding $large-padding;
+                }
             }
         }
-    }
-    @include tablet {
-        @include two-column-grid;
-        grid-template-areas: "header header" "main main" "navbar navbar" "footer footer ";
-        table {
-            tr {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-    }
-    @include desktop {
-        @include three-column-grid;
-        grid-template-areas: "header header header" "navbar navbar navbar" "main main main" "footer footer footer";
-        table {
-            tr {
-                display: flex;
-                flex-direction: row;
-            }
-        }
-    }
-}

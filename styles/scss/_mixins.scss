@@ -10,20 +10,12 @@
     list-style: none;
 }
 
-@mixin no-underline-link {
-    text-decoration: none;
-}
-
 @mixin hide-element {
     display: none
 }
 
 @mixin block-elem {
     display: block;
-}
-
-@mixin inline-block-elem {
-    display: inline-block;
 }
 
 @mixin center-block {

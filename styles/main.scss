@@ -38,8 +38,8 @@ h2 {
 }
 
 a {
-    list-style: none;
-    text-decoration: none;
+    @include bulletless-list;
+    @include no-underline-link;
 }
 
 //hEADER
@@ -95,6 +95,11 @@ footer {
         span {
             font-family: Parisian;
             font-size: large;
+        }
+    }
+    @include desktop {
+        .top-links {
+            visibility: hidden;
         }
     }
 }

@@ -589,26 +589,21 @@ fieldset {
   }
 }
 
-#deliverycontainer P {
-  margin: 0 auto;
-}
-
 #deliverycontainer table {
   border-collapse: collapse;
   border: 1px solid #000;
   width: 60%;
   text-align: center;
-  margin: 0 auto;
+  margin-left: 1rem;
 }
 
 #deliverycontainer th,
 #deliverycontainer td {
-  padding: 0.5rem 1rem;
   border: 1px solid #000;
 }
 
 #deliverycontainer caption {
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
@@ -628,8 +623,9 @@ fieldset {
   grid-area: navbar;
 }
 
-#deliverycontainer main {
-  grid-area: main;
+#deliverycontainer main .deliveryinfo {
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 #deliverycontainer footer {
@@ -645,15 +641,6 @@ fieldset {
         grid-template-areas: "header" "main" "navbar" "footer";
     grid-gap: 1rem;
   }
-  #deliverycontainer table tr {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 
 @media screen and (min-width: 601px) {
@@ -664,14 +651,8 @@ fieldset {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "header header" "main main" "navbar navbar" "footer footer ";
   }
-  #deliverycontainer table tr {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  #deliverycontainer td {
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -681,16 +662,10 @@ fieldset {
     display: grid;
     -ms-grid-columns: 0.6fr 1fr 1fr;
         grid-template-columns: 0.6fr 1fr 1fr;
-        grid-template-areas: "header header header" "navbar navbar navbar" "main main main" "footer footer footer";
+        grid-template-areas: "header header header" "navbar main main" "footer footer footer";
   }
-  #deliverycontainer table tr {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+  #deliverycontainer td {
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -803,6 +778,12 @@ footer p {
 footer p span {
   font-family: Parisian;
   font-size: large;
+}
+
+@media screen and (min-width: 1024px) {
+  footer .top-links {
+    visibility: hidden;
+  }
 }
 
 #menubutton {
