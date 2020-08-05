@@ -1,7 +1,42 @@
+.galeryitem1 {
+    grid-area: galeryitem1;
+}
+
+.galeryitem2 {
+    grid-area: galeryitem2;
+
+}
+
+.galeryitem3 {
+    grid-area: galeryitem3;
+}
+
+.galeryitem4 {
+    grid-area: galeryitem4;
+}
+
+.galeryitem5 {
+    grid-area: galeryitem5;
+}
+
+.galeryitem6 {
+    grid-area: galeryitem6;
+}
+
+.galeryitem7 {
+    grid-area: galeryitem7;
+}
+
+
+
 #19ctgridcontainer {
 
     header {
         grid-area: header;
+    }
+
+    .booksgalery {
+        grid-area: booksgalery;
     }
 
     #navbar {
@@ -12,48 +47,37 @@
         grid-area: footer;
     }
 
-    .booksgalery {
-        grid-area: booksgalery;
-    }
-
-    .galeryitem1 {
-        grid-area: galeryitem1;
-    }
-
-    .galeryitem2 {
-        grid-area: galeryitem1;
-
-    }
-
-    .galeryitem3 {
-        grid-area: galeryitem1;
-    }
-
-    .galeryitem4 {
-        grid-area: galeryitem1;
-    }
-
-    .galeryitem5 {
-        grid-area: galeryitem1;
-    }
-
-    .galeryitem6 {
-        grid-area: galeryitem1;
-    }
-
-    .galeryitem7 {
-        grid-area: galeryitem1;
-    }
 
     @include mobile {
         @include single-column-grid;
+        grid-template-areas: "header""booksgalery""navbar""footer";
+        grid-gap: 1rem;
+    }
+
+    .booksgalery {
+        @include single-column-grid;
+        grid-template-areas: "galeryitem1""galeryitem2""galeryitem3""galeryitem4""galeryitem5""galeryitem6""galeryitem7";
     }
 
     @include tablet {
         @include two-column-grid;
+        grid-template-areas: "header header""booksgalery booksgalery""navbar navbar""footer footer";
+
+        .booksgalery {
+            @include two-column-grid;
+            grid-template-areas: "galeryitem1 galeryitem1""galeryitem2 galeryitem3""galeryitem4 galeryitem5""galeryitem6 galeryitem7";
+        }
     }
 
     @include desktop {
         @include three-column-grid;
+        grid-template-areas: "header header""navbar booksgalery""footer footer";
+
+        .booksgalery {
+            @include three-column-grid;
+            grid-template-areas: "galeryitem1 galeryitem1 galeryitem1" "galeryitem2 galeryitem3 galeryitem4" "galeryitem5 galeryitem6 galeryitem7";
+        }
     }
+
+
 }

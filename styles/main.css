@@ -464,8 +464,54 @@ fieldset {
   }
 }
 
+.galeryitem1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: galeryitem1;
+}
+
+.galeryitem2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: galeryitem2;
+}
+
+.galeryitem3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: galeryitem3;
+}
+
+.galeryitem4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: galeryitem4;
+}
+
+.galeryitem5 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: galeryitem5;
+}
+
+.galeryitem6 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: galeryitem6;
+}
+
+.galeryitem7 {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: galeryitem7;
+}
+
 #19ctgridcontainer header {
   grid-area: header;
+}
+
+#19ctgridcontainer .booksgalery {
+  grid-area: booksgalery;
 }
 
 #19ctgridcontainer #navbar {
@@ -476,45 +522,23 @@ fieldset {
   grid-area: footer;
 }
 
-#19ctgridcontainer .booksgalery {
-  grid-area: booksgalery;
-}
-
-#19ctgridcontainer .galeryitem1 {
-  grid-area: galeryitem1;
-}
-
-#19ctgridcontainer .galeryitem2 {
-  grid-area: galeryitem1;
-}
-
-#19ctgridcontainer .galeryitem3 {
-  grid-area: galeryitem1;
-}
-
-#19ctgridcontainer .galeryitem4 {
-  grid-area: galeryitem1;
-}
-
-#19ctgridcontainer .galeryitem5 {
-  grid-area: galeryitem1;
-}
-
-#19ctgridcontainer .galeryitem6 {
-  grid-area: galeryitem1;
-}
-
-#19ctgridcontainer .galeryitem7 {
-  grid-area: galeryitem1;
-}
-
 @media screen and (max-width: 600px) {
   #19ctgridcontainer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+        grid-template-areas: "header" "booksgalery" "navbar" "footer";
+    grid-gap: 1rem;
   }
+}
+
+#19ctgridcontainer .booksgalery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "galeryitem1" "galeryitem2" "galeryitem3" "galeryitem4" "galeryitem5" "galeryitem6" "galeryitem7";
 }
 
 @media screen and (min-width: 601px) {
@@ -523,6 +547,14 @@ fieldset {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+        grid-template-areas: "header header" "booksgalery booksgalery" "navbar navbar" "footer footer";
+  }
+  #19ctgridcontainer .booksgalery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "galeryitem1 galeryitem1" "galeryitem2 galeryitem3" "galeryitem4 galeryitem5" "galeryitem6 galeryitem7";
   }
 }
 
@@ -532,6 +564,14 @@ fieldset {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "header header" "navbar booksgalery" "footer footer";
+  }
+  #19ctgridcontainer .booksgalery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "galeryitem1 galeryitem1 galeryitem1" "galeryitem2 galeryitem3 galeryitem4" "galeryitem5 galeryitem6 galeryitem7";
   }
 }
 
