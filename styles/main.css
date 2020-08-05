@@ -464,6 +464,22 @@ fieldset {
   }
 }
 
+#19ctgridcontainer header {
+  grid-area: header;
+}
+
+#19ctgridcontainer #navbar {
+  grid-area: navbar;
+}
+
+#19ctgridcontainer footer {
+  grid-area: footer;
+}
+
+#19ctgridcontainer main {
+  grid-area: main;
+}
+
 #deliverycontainer P {
   margin: 0 auto;
 }
