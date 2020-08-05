@@ -50,10 +50,21 @@
     @include tablet {
         @include two-column-grid;
         grid-template-areas: "header header" "main main" "navbar navbar" "footer footer ";
+        table {
+            tr {
+                display: flex;
+                flex-direction: column;
+            }
+        }
     }
     @include desktop {
         @include three-column-grid;
         grid-template-areas: "header header header" "navbar navbar navbar" "main main main" "footer footer footer";
-        table {}
+        table {
+            tr {
+                display: flex;
+                flex-direction: row;
+            }
+        }
     }
 }
