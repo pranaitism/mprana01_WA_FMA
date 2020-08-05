@@ -508,6 +508,33 @@ fieldset {
   grid-area: galeryitem1;
 }
 
+@media screen and (max-width: 600px) {
+  #19ctgridcontainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  #19ctgridcontainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #19ctgridcontainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 #deliverycontainer P {
   margin: 0 auto;
 }

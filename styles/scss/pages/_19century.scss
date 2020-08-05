@@ -45,5 +45,15 @@
         grid-area: galeryitem1;
     }
 
+    @include mobile {
+        @include single-column-grid;
+    }
 
+    @include tablet {
+        @include two-column-grid;
+    }
+
+    @include desktop {
+        @include three-column-grid;
+    }
 }
