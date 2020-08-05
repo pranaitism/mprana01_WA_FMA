@@ -592,7 +592,7 @@ fieldset {
 #deliverycontainer table {
   border-collapse: collapse;
   border: 1px solid #000;
-  width: 60%;
+  width: 65%;
   text-align: center;
   margin-left: 1rem;
 }
@@ -600,6 +600,7 @@ fieldset {
 #deliverycontainer th,
 #deliverycontainer td {
   border: 1px solid #000;
+  padding: 0.1rem;
 }
 
 #deliverycontainer caption {
@@ -652,7 +653,7 @@ fieldset {
         grid-template-areas: "header header" "main main" "navbar navbar" "footer footer ";
   }
   #deliverycontainer td {
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 0.5rem;
   }
 }
 
@@ -665,7 +666,10 @@ fieldset {
         grid-template-areas: "header header header" "navbar main main" "footer footer footer";
   }
   #deliverycontainer td {
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
+  }
+  #deliverycontainer caption {
+    font-size: 1.1rem;
   }
 }
 
@@ -808,13 +812,25 @@ footer p span {
   text-align: center;
 }
 
+@media screen and (min-width: 601px) {
+  #navbar {
+    margin-left: 5rem;
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #navbar {
+    margin-left: 1rem;
+  }
+}
+
 #navbar ul li {
   margin: 0.4rem;
-  padding: 0.5rem;
+  padding: 0.4rem;
   background-color: #6D7B42;
   border: groove;
   display: block;
-  margin-left: 1.5rem;
 }
 
 #navbar ul li:hover > ul {

@@ -42,7 +42,7 @@ a {
     @include no-underline-link;
 }
 
-//hEADER
+//header
 header {
     display: inline-flex;
     justify-content: space-between;
@@ -123,6 +123,13 @@ footer {
 #navbar {
     width: 65%;
     text-align: center;
+    @include tablet {
+        margin-left: 5rem;
+        width: 70%;
+    }
+    @include desktop {
+        margin-left: 1rem;
+    }
     ul {
         li {
             &:hover {
@@ -134,11 +141,10 @@ footer {
                 }
             }
             margin: 0.4rem;
-            padding: 0.5rem;
+            padding: 0.4rem;
             background-color: $menu-button-color;
             border: groove;
             @include block-elem;
-            margin-left: 1.5rem;
             & :hover {
                 color: $footer-links-color;
             }
