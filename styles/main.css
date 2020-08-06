@@ -190,6 +190,9 @@ p {
 
 #booksgirdcontainer main a {
   color: #236841;
+}
+
+#booksgirdcontainer main a:hover {
   font-weight: 600;
 }
 
