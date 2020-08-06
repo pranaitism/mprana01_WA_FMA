@@ -1,0 +1,4 @@
+@function decimal-width($number) {
+    $number: $number * 10%;
+    @return $number;
+}

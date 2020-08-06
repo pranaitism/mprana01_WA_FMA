@@ -1,21 +1,30 @@
-p {
-    width: 90%;
-}
-
 #homegridcontainer {
-    figure {
+    .main-picture {
+        @include img-darken;
         img {
-            width: 100%;
-            height: auto;
-            padding: $large-padding;
+            width: decimal-width(8);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
+    .sidebar {
+        figure {
+            @include img-darken;
+        }
+    }
+    //main styling
     .main {
         h1 {
             margin: $small-margin;
+            text-transform: uppercase;
         }
         h2 {
             margin: $small-margin;
+            margin-top: 2rem;
+        }
+        h3 {
+            @extend h2;
         }
         P {
             margin: $small-margin;
@@ -23,15 +32,17 @@ p {
         ul {
             margin-left: 2rem;
             li {
-                width: 90%;
+                width: decimal-width(9);
             }
         }
-        .media {
-            width: 95%;
-            height: auto;
-            margin-left: 0.5rem;
-        }
     }
+    //// responsive video 
+    video {
+        max-width: decimal-width(9);
+        height: auto;
+        margin-left: $small-margin;
+    }
+    // define grid areas
     header {
         grid-area: header;
     }
@@ -41,7 +52,7 @@ p {
     #navbar {
         grid-area: navbar;
     }
-    .main {
+    main {
         grid-area: main;
     }
     .sidebar {
@@ -50,81 +61,42 @@ p {
     footer {
         grid-area: footer;
     }
+    .media {
+        grid-area: media;
+    }
+    .selling {
+        grid-area: selling;
+    }
+    .buying {
+        grid-area: buying;
+    }
+    .valuing {
+        grid-area: valuing;
+    }
     @include mobile {
         @include single-column-grid;
-        grid-template-areas: "header" "main-picture" "main" "sidebar" "navbar" "footer";
-        grid-gap: 1rem;
-        .sidebar {
-            figure {
-                max-width: 40%;
-                @include img-darken;
-            }
-            .sidebar-feature1 {
-                margin-top: $small-margin;
-                margin-left: $small-margin;
-                h3 {
-                    margin-bottom: $small-margin;
-                }
-            }
-            margin-left: $small-margin;
-            .sidebar-feature2 {
-                margin-top: 1rem;
-                margin-left: $small-margin;
-            }
+        grid-template-areas: "header" "main-picture" "main" "navbar" "footer";
+        grid-gap: $medium-gridgap;
+        main {
+            @include single-column-grid;
+            grid-template-areas: "media" "selling" "buying" "valuing""sidebar";
         }
     }
     @include tablet {
         @include two-column-grid;
-        grid-template-areas: "header header" "main-picture main-picture" "main main" "sidebar sidebar" "navbar navbar" "footer footer";
-        grid-gap: 1rem;
-        .main-picture {
-            width: 95%;
-            height: auto;
-            @include center-block;
-        }
-        .main-content {
-            .media {
-                margin-left: $large-margin;
-                max-width: 90%;
-                height: auto;
-            }
-            .selling {
-                margin-left: $large-margin;
-            }
-        }
-        .buying {
-            margin-left: $large-margin;
-        }
-        .valuing {
-            margin-left: $large-margin;
-        }
-        .sidebar {
-            margin-left: $large-margin;
-            figure {
-                @include img-darken;
-                img {
-                    max-width: 30%;
-                    height: auto;
-                }
-            }
+        grid-template-areas: "header header" "main-picture main-picture" "main main" "navbar navbar" "footer footer";
+        grid-gap: 2rem;
+        main {
+            @include two-column-grid;
+            grid-template-areas: "media selling" "buying valuing" "sidebar sidebar";
         }
     }
     @include desktop {
         @include three-column-grid;
-        grid-template-areas: "header header header" "navbar main-picture main-picture" "main main sidebar" "main main sidebar" "footer footer footer";
-        .media {
-            h2 {
-                margin-left: $small-margin;
-            }
-            video {
-                width: 100%;
-                height: auto;
-                padding: 1rem;
-            }
-        }
-        .sidebar {
-            width: 90%;
-            margin-top: $large-margin;
+        grid-template-areas: "header header header" "navbar main-picture main-picture" "main main main" "footer footer footer";
+        main {
+            @include three-column-grid;
+            grid-template-areas: "media media selling" "buying valuing sidebar";
         }
     }
 }

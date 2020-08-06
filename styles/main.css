@@ -14,22 +14,29 @@
   src: local("../fonts/parisr.woff") format("woff");
 }
 
-p {
-  width: 90%;
+#homegridcontainer .main-picture img {
+  mix-blend-mode: darken;
 }
 
-#homegridcontainer figure img {
-  width: 100%;
-  height: auto;
-  padding: 1rem;
+#homegridcontainer .main-picture img {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#homegridcontainer .sidebar figure img {
+  mix-blend-mode: darken;
 }
 
 #homegridcontainer .main h1 {
   margin: 1rem;
+  text-transform: uppercase;
 }
 
-#homegridcontainer .main h2 {
+#homegridcontainer .main h2, #homegridcontainer .main h3 {
   margin: 1rem;
+  margin-top: 2rem;
 }
 
 #homegridcontainer .main P {
@@ -44,10 +51,10 @@ p {
   width: 90%;
 }
 
-#homegridcontainer .main .media {
-  width: 95%;
+#homegridcontainer video {
+  max-width: 90%;
   height: auto;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 
 #homegridcontainer header {
@@ -62,7 +69,7 @@ p {
   grid-area: navbar;
 }
 
-#homegridcontainer .main {
+#homegridcontainer main {
   grid-area: main;
 }
 
@@ -74,74 +81,55 @@ p {
   grid-area: footer;
 }
 
-@media screen and (max-width: 550px) {
+#homegridcontainer .media {
+  grid-area: media;
+}
+
+#homegridcontainer .selling {
+  grid-area: selling;
+}
+
+#homegridcontainer .buying {
+  grid-area: buying;
+}
+
+#homegridcontainer .valuing {
+  grid-area: valuing;
+}
+
+@media screen and (max-width: 600px) {
   #homegridcontainer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: "header" "main-picture" "main" "sidebar" "navbar" "footer";
+        grid-template-areas: "header" "main-picture" "main" "navbar" "footer";
     grid-gap: 1rem;
   }
-  #homegridcontainer .sidebar {
-    margin-left: 1rem;
-  }
-  #homegridcontainer .sidebar figure {
-    max-width: 40%;
-  }
-  #homegridcontainer .sidebar figure img {
-    mix-blend-mode: darken;
-  }
-  #homegridcontainer .sidebar .sidebar-feature1 {
-    margin-top: 1rem;
-    margin-left: 1rem;
-  }
-  #homegridcontainer .sidebar .sidebar-feature1 h3 {
-    margin-bottom: 1rem;
-  }
-  #homegridcontainer .sidebar .sidebar-feature2 {
-    margin-top: 1rem;
-    margin-left: 1rem;
+  #homegridcontainer main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "media" "selling" "buying" "valuing" "sidebar";
   }
 }
 
-@media screen and (min-width: 551px) {
+@media screen and (min-width: 601px) {
   #homegridcontainer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "header header" "main-picture main-picture" "main main" "sidebar sidebar" "navbar navbar" "footer footer";
-    grid-gap: 1rem;
+        grid-template-areas: "header header" "main-picture main-picture" "main main" "navbar navbar" "footer footer";
+    grid-gap: 2rem;
   }
-  #homegridcontainer .main-picture {
-    width: 95%;
-    height: auto;
-    margin: 0 auto;
-  }
-  #homegridcontainer .main-content .media {
-    margin-left: 2rem;
-    max-width: 90%;
-    height: auto;
-  }
-  #homegridcontainer .main-content .selling {
-    margin-left: 2rem;
-  }
-  #homegridcontainer .buying {
-    margin-left: 2rem;
-  }
-  #homegridcontainer .valuing {
-    margin-left: 2rem;
-  }
-  #homegridcontainer .sidebar {
-    margin-left: 2rem;
-  }
-  #homegridcontainer .sidebar figure img {
-    mix-blend-mode: darken;
-  }
-  #homegridcontainer .sidebar figure img {
-    max-width: 30%;
-    height: auto;
+  #homegridcontainer main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "media selling" "buying valuing" "sidebar sidebar";
   }
 }
 
@@ -151,19 +139,14 @@ p {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "header header header" "navbar main-picture main-picture" "main main sidebar" "main main sidebar" "footer footer footer";
+        grid-template-areas: "header header header" "navbar main-picture main-picture" "main main main" "footer footer footer";
   }
-  #homegridcontainer .media h2 {
-    margin-left: 1rem;
-  }
-  #homegridcontainer .media video {
-    width: 100%;
-    height: auto;
-    padding: 1rem;
-  }
-  #homegridcontainer .sidebar {
-    width: 90%;
-    margin-top: 2rem;
+  #homegridcontainer main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "media media selling" "buying valuing sidebar";
   }
 }
 
@@ -214,7 +197,7 @@ p {
   max-width: 60%;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   #booksgirdcontainer {
     display: -ms-grid;
     display: grid;
@@ -225,7 +208,7 @@ p {
   }
 }
 
-@media (min-width: 551px) {
+@media (min-width: 601px) {
   #booksgirdcontainer {
     display: -ms-grid;
     display: grid;
@@ -368,7 +351,7 @@ p {
   grid-area: main;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   #contactgridcontainer {
     display: -ms-grid;
     display: grid;
@@ -394,7 +377,7 @@ p {
   }
 }
 
-@media screen and (min-width: 551px) {
+@media screen and (min-width: 601px) {
   #contactgridcontainer {
     display: -ms-grid;
     display: grid;
@@ -531,7 +514,7 @@ p {
   mix-blend-mode: darken;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   #booksgalerycontainer {
     display: -ms-grid;
     display: grid;
@@ -551,7 +534,7 @@ p {
   grid-gap: 1rem;
 }
 
-@media screen and (min-width: 551px) {
+@media screen and (min-width: 601px) {
   #booksgalerycontainer {
     display: -ms-grid;
     display: grid;
@@ -630,7 +613,7 @@ p {
   grid-area: footer;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   #deliverycontainer {
     display: -ms-grid;
     display: grid;
@@ -641,7 +624,7 @@ p {
   }
 }
 
-@media screen and (min-width: 551px) {
+@media screen and (min-width: 601px) {
   #deliverycontainer {
     display: -ms-grid;
     display: grid;
@@ -676,7 +659,7 @@ body {
   color: #040404;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   body {
     line-height: 1.30rem;
   }
@@ -685,7 +668,7 @@ body {
   }
 }
 
-@media screen and (min-width: 551px) {
+@media screen and (min-width: 601px) {
   body {
     line-height: 1.25rem;
   }
@@ -700,7 +683,7 @@ h1 {
   font-family: Parisian;
 }
 
-h2 {
+h2, #homegridcontainer .main h3 {
   font-family: Parisian;
   font-weight: lighter;
   text-decoration: underline;
@@ -723,7 +706,7 @@ header {
   padding: 1rem;
 }
 
-header h2 {
+header h2, header #homegridcontainer .main h3, #homegridcontainer .main header h3 {
   position: relative;
   text-decoration: none;
   font-family: Parisian;
@@ -734,7 +717,7 @@ header .img {
   position: fixed;
 }
 
-header h2 {
+header h2, header #homegridcontainer .main h3, #homegridcontainer .main header h3 {
   font-family: Parisian;
   font-weight: lighter;
   font-size: large;
@@ -815,7 +798,7 @@ footer p span {
   text-align: center;
 }
 
-@media screen and (min-width: 551px) {
+@media screen and (min-width: 601px) {
   #navbar {
     margin-left: 5rem;
     width: 70%;
