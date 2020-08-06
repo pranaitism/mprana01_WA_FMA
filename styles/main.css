@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -316,64 +317,81 @@ main p {
   }
 }
 
-form {
-  width: 80%;
-  margin: 0 auto;
-}
-
-label {
+#contactgridcontainer label {
   display: block;
 }
 
-textarea {
-  width: 100%;
-  height: 8rem;
+#contactgridcontainer textarea {
+  width: 95%;
+  height: 7rem;
 }
 
-button {
+#contactgridcontainer button {
   background: #236841;
-  color: #FFF;
   padding: 1rem;
 }
 
-input,
-select {
+#contactgridcontainer input,
+#contactgridcontainer select {
   width: 92%;
   padding: 0.5rem;
   margin: 0.5rem 0;
   margin-left: 0.5rem;
 }
 
-input[type=checkbox],
-input[type=radio] {
+#contactgridcontainer input[type=checkbox],
+#contactgridcontainer input[type=radio] {
   vertical-align: middle;
   width: 10%;
   -webkit-transform: scale(1.5);
   transform: scale(1.5);
 }
 
-fieldset {
-  border: 1px solid #A8A8A8;
+#contactgridcontainer fieldset {
+  border: 1px solid #6E4D19;
 }
 
-#contact {
+#contactgridcontainer form p {
+  color: #F00;
+}
+
+#contactgridcontainer input:invalid:focus {
+  outline: 2px solid #F00;
+}
+
+#contactgridcontainer input:valid:focus:not([type=radio]):not([type=checkbox]) {
+  outline: 2px solid #236841;
+}
+
+#contactgridcontainer .contactext {
+  grid-area: contactext;
+}
+
+#contactgridcontainer .contactext p {
+  margin-top: £small-marging;
+}
+
+#contactgridcontainer #contact {
   grid-area: contact;
 }
 
-#interest {
+#contactgridcontainer #interest {
   grid-area: interest;
 }
 
-#extra1 {
+#contactgridcontainer #extra1 {
   grid-area: extra1;
 }
 
-#extra2 {
+#contactgridcontainer #extra2 {
   grid-area: extra2;
 }
 
-#submit {
+#contactgridcontainer #submit {
   grid-area: submit;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 #contactgridcontainer header {
@@ -401,19 +419,37 @@ fieldset {
         grid-template-areas: "header" "main" "navbar" "footer";
     grid-gap: 1rem;
   }
-  #contactgridcontainer form {
+  #contactgridcontainer main {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: (auto)[4];
-        grid-template-rows: repeat(4, auto);
-        grid-template-areas: "contact" "interest" "extra1" "extra2" "submit";
-    grid-gap: 0.8rem 0.4rem;
+        grid-template-areas: "contactext" "form";
+    grid-gap: 1rem;
+  }
+  #contactgridcontainer .contactext h2 {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+  #contactgridcontainer form {
+    width: 80%;
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "contactext" "contact" "interest" "extra1" "extra2" "submit";
+    grid-gap: 1rem;
     background: #EEE;
     padding: 1rem;
-    border: 2px solid #7E7E7E;
+    border: 2px solid #6E4D19;
     margin-bottom: 2rem;
+  }
+  #contactgridcontainer form label {
+    margin-left: 0.5rem;
+  }
+  #contactgridcontainer form legend {
+    margin-left: 0.5rem;
   }
 }
 
@@ -426,19 +462,39 @@ fieldset {
         grid-template-areas: "header header" "main main" "navbar navbar" "footer footer";
     grid-gap: 1rem;
   }
-  #contactgridcontainer form {
+  #contactgridcontainer main {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: (auto)[4];
-        grid-template-rows: repeat(4, auto);
-        grid-template-areas: "contact" "interest" "extra1" "extra2" "submit";
-    grid-gap: 0.8rem 0.6rem;
+        grid-template-areas: "contactext" "form";
+    grid-gap: 1rem;
+  }
+  #contactgridcontainer .contactext {
+    margin-left: 3rem;
+  }
+  #contactgridcontainer .contactext p {
+    margin-top: 1rem;
+  }
+  #contactgridcontainer form {
+    width: 60%;
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "contactext" "contact" "interest" "extra1" "extra2" "submit";
+    grid-gap: 1rem;
     background: #EEE;
     padding: 1rem;
-    border: 2px solid #7E7E7E;
+    border: 2px solid #6E4D19;
     margin-bottom: 2rem;
+  }
+  #contactgridcontainer form label {
+    margin-left: 0.5rem;
+  }
+  #contactgridcontainer form legend {
+    margin-left: 0.5rem;
   }
 }
 
@@ -451,16 +507,31 @@ fieldset {
         grid-template-areas: "header header header" "navbar main main" "footer footer footer";
     grid-gap: 1rem;
   }
-  #contactgridcontainer form {
+  #contactgridcontainer main {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: (auto)[3];
-        grid-template-rows: repeat(3, auto);
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "contactext contactext" "form form";
+    grid-gap: 1rem;
+  }
+  #contactgridcontainer .contactext p {
+    margin-top: 1rem;
+  }
+  #contactgridcontainer form {
+    width: 87%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: "contact interest" "contact extra1" "contact extra2" "submit submit";
-    grid-gap: 0.8rem 0.5rem;
-    max-width: 700px;
+    grid-gap: 1rem;
+  }
+  #contactgridcontainer form label {
+    margin-left: 0.5rem;
+  }
+  #contactgridcontainer form legend {
+    margin-left: 0.5rem;
   }
 }
 
