@@ -14,7 +14,12 @@ body {
     background-color: $background-color;
     font-family: Arial, Helvetica, sans-serif;
     @include mobile {
-        line-height: 1.25rem;
+        line-height: 1.30rem;
+        .main-picture{
+            display: none;
+        }
+     
+        
     }
     @include tablet {
         line-height: 1.5rem;
@@ -100,6 +105,7 @@ footer {
     @include desktop {
         .top-links {
             visibility: hidden;
+            height: 0;
         }
     }
 }

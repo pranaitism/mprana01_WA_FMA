@@ -751,7 +751,10 @@ body {
 
 @media screen and (max-width: 600px) {
   body {
-    line-height: 1.25rem;
+    line-height: 1.30rem;
+  }
+  body .main-picture {
+    display: none;
   }
 }
 
@@ -858,6 +861,7 @@ footer p span {
 @media screen and (min-width: 1024px) {
   footer .top-links {
     visibility: hidden;
+    height: 0;
   }
 }
 
