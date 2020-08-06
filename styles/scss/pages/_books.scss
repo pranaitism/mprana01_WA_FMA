@@ -1,100 +1,52 @@
-$phone-width:600px;
-$tablet-width: 601px;
-$desktop-width: 1024px;
-main {
-    p {
-        width: 85%;
-    }
-}
-
-@media screen and(max-width: #{$phone-width}) {
-    #booksgirdcontainer {
-        @include single-column-grid;
-        grid-template-areas: "header" "main" "navbar" "footer";
-        grid-gap: 1rem;
-    }
+#booksgirdcontainer {
+    //define grid areas
     header {
-        grid-template-areas: header;
+        grid-area: header;
     }
+    main {
+        grid-area: main;
+    }
+    #navbar {
+        grid-area: navbar;
+    }
+    footer {
+        grid-area: footer;
+    }
+    //general stylin for page
     main {
         p {
             width: 85%;
             @include center-block;
         }
-        .pictures {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            figure {
-                min-width: 50%;
-                height: auto;
-                figcaption {
-                    text-align: center;
-                }
+        a {
+            color: $brand-color;
+            font-weight: 600;
+        }
+    }
+    .pictures {
+        margin-top: $small-margin;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        figure {
+            img {
+                max-width: 60%;
             }
         }
-        grid-area: main;
     }
-    footer {
-        grid-area: footer;
+    @media screen and(max-width: #{$phone-width}) {
+        @include single-column-grid;
+        grid-template-areas: "header" "main" "navbar" "footer";
+        grid-gap: 1rem;
     }
-    #navbar {
-        @include center-block;
-        grid-area: navbar;
-    }
-}
-
-@media (min-width: #{$tablet-width}) {
-    #booksgirdcontainer {
+    @media (min-width: #{$tablet-width}) {
         @include two-column-grid;
         grid-template-areas: "header header" "main main" "navbar navbar" "footer footer";
         grid-gap: 1rem;
     }
-    .header {
-        width: 100%;
-        grid-template-areas: header;
-    }
-    main {
-        grid-area: main;
-    }
-    .pictures {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    footer {
-        grid-area: footer;
-    }
-    #navbar {
-        grid-area: navbar;
-    }
-}
-
-@media screen and (min-width: #{$desktop-width}) {
-    #booksgirdcontainer {
+    @media screen and (min-width: #{$desktop-width}) {
         @include three-column-grid;
-        grid-template-areas: " header header header" "navbar main main" "main main main" "footer footer footer";
+        grid-template-areas: "header header header" "navbar main main" "footer footer footer";
         grid-gap: 1rem;
-        justify-content: space-evenly;
-    }
-    header {
-        ul {
-            display: inline-block;
-        }
-        grid-area: header;
-    }
-    #menubutton {
-        display: none;
-    }
-    main {
-        grid-area: main;
-    }
-    .pictures {
-        display: inline-flex;
-        justify-content: space-between;
-    }
-    footer {
-        grid-area: footer;
     }
 }
