@@ -9,22 +9,17 @@
 @import 'scss/pages/contactus';
 @import 'scss/pages/19century';
 @import 'scss/pages/delivery';
-
 //Styling for all pages
 body {
     background-color: $background-color;
     font-family: Arial, Helvetica, sans-serif;
-
+    color: #040404;
     @include mobile {
         line-height: 1.30rem;
-
         .main-picture {
             display: none;
         }
-
-
     }
-
     @include tablet {
         line-height: 1.25rem;
     }
@@ -56,36 +51,28 @@ header {
     display: inline-flex;
     justify-content: space-between;
     padding: $large-padding;
-
     h2 {
         position: relative;
         text-decoration: none;
         font-family: Parisian;
     }
-
     .img {
-
         background-image: url("images/Logo/logo/emblem_logo_144.png");
         position: fixed;
     }
-
     h2 {
         font-family: Parisian;
         font-weight: lighter;
         font-size: large;
         margin-top: 1.5rem;
     }
-
     ul {
         @include hide-element;
-
         @include desktop {
             display: inline-flex;
             @include bulletless-list;
-
             li {
                 padding: 1rem;
-
                 a {
                     color: $brand-color;
                 }
@@ -97,29 +84,24 @@ header {
 // FOOTER
 footer {
     background-color: $brand-color;
-
     a {
         font-weight: lighter;
         color: $footer-links-color;
     }
-
     li {
         @include bulletless-list;
         margin: $small-margin;
         @include center-text;
     }
-
     p {
         color: $footer-links-color;
         font-weight: lighter;
         margin: $small-margin;
-
         span {
             font-family: Parisian;
             font-size: large;
         }
     }
-
     @include desktop {
         .top-links {
             visibility: hidden;
@@ -139,7 +121,6 @@ footer {
     border-radius: 0.2rem;
     height: 80%;
     padding: 0.1rem;
-
     a:hover {
         background: $link-hover-bg;
     }
@@ -148,16 +129,13 @@ footer {
 #navbar {
     width: 65%;
     text-align: center;
-
     @include tablet {
         margin-left: 5rem;
         width: 70%;
     }
-
     @include desktop {
         margin-left: 1rem;
     }
-
     ul {
         li {
             &:hover {
@@ -168,31 +146,25 @@ footer {
                     background: $background-color;
                 }
             }
-
             margin: 0.4rem;
             padding: 0.4rem;
             background-color: $menu-button-color;
             border: groove;
             @include block-elem;
-
             & :hover {
                 color: $footer-links-color;
             }
-
             a {
                 color: black;
                 display: block;
             }
-
             ul {
                 display: none;
-
                 &:hover {
                     visibility: visible;
                     opacity: 1;
                     display: block;
                 }
-
                 li {
                     width: 90%;
                 }

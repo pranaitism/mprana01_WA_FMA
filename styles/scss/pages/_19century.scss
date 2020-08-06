@@ -1,4 +1,6 @@
 #booksgalerycontainer {
+    margin-left: small-margin;
+    //define grid areas
     header {
         grid-area: header;
     }
@@ -11,6 +13,7 @@
     footer {
         grid-area: footer;
     }
+    // define subgrid areas
     .galeryitem1 {
         grid-area: galeryitem1;
     }
@@ -32,27 +35,32 @@
     .galeryitem7 {
         grid-area: galeryitem7;
     }
+    em {
+        color: darken($color: grey, $amount: 30%)
+    }
+    p {
+        margin-top: $small-margin;
+    }
+    // darken pictures
     figure {
         @include img-darken;
         text-align: left;
     }
-    article {
-        width: 80%;
-    }
+    // media queries
     @include mobile {
         @include single-column-grid;
         grid-template-areas: "header""booksgalery""navbar""footer";
-        grid-gap: 1rem;
+        grid-gap: $medium-gridgap;
     }
     .booksgalery {
         @include single-column-grid;
         grid-template-areas: "galeryitem1""galeryitem2""galeryitem3""galeryitem4""galeryitem5""galeryitem6""galeryitem7";
-        grid-gap: 1rem;
+        grid-gap: $medium-gridgap;
     }
     @include tablet {
         @include two-column-grid;
         grid-template-areas: "header header""booksgalery booksgalery""navbar navbar""footer footer";
-        grid-gap: 1rem;
+        grid-gap: $medium-gridgap;
         .booksgalery {
             @include two-column-grid;
             grid-template-areas: "galeryitem1 galeryitem1""galeryitem2 galeryitem3""galeryitem4 galeryitem5""galeryitem6 galeryitem7";

@@ -149,8 +149,8 @@ p {
   #homegridcontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.6fr 1fr 1fr;
-        grid-template-columns: 0.6fr 1fr 1fr;
+    -ms-grid-columns: 0.8fr 0.8fr 0.8fr;
+        grid-template-columns: 0.8fr 0.8fr 0.8fr;
         grid-template-areas: "header header header" "navbar main-picture main-picture" "main main sidebar" "main main sidebar" "footer footer footer";
   }
   #homegridcontainer .media h2 {
@@ -240,8 +240,8 @@ p {
   #booksgirdcontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.6fr 1fr 1fr;
-        grid-template-columns: 0.6fr 1fr 1fr;
+    -ms-grid-columns: 0.8fr 0.8fr 0.8fr;
+        grid-template-columns: 0.8fr 0.8fr 0.8fr;
         grid-template-areas: "header header header" "navbar main main" "footer footer footer";
     grid-gap: 1rem;
   }
@@ -432,8 +432,8 @@ p {
   #contactgridcontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.6fr 1fr 1fr;
-        grid-template-columns: 0.6fr 1fr 1fr;
+    -ms-grid-columns: 0.8fr 0.8fr 0.8fr;
+        grid-template-columns: 0.8fr 0.8fr 0.8fr;
         grid-template-areas: "header header header" "navbar main main" "footer footer footer";
     grid-gap: 1rem;
   }
@@ -463,6 +463,10 @@ p {
   #contactgridcontainer form legend {
     margin-left: 0.5rem;
   }
+}
+
+#booksgalerycontainer {
+  margin-left: small-margin;
 }
 
 #booksgalerycontainer header {
@@ -523,16 +527,20 @@ p {
   grid-area: galeryitem7;
 }
 
+#booksgalerycontainer em {
+  color: #343434;
+}
+
+#booksgalerycontainer p {
+  margin-top: 1rem;
+}
+
 #booksgalerycontainer figure {
   text-align: left;
 }
 
 #booksgalerycontainer figure img {
   mix-blend-mode: darken;
-}
-
-#booksgalerycontainer article {
-  width: 80%;
 }
 
 @media screen and (max-width: 550px) {
@@ -577,15 +585,15 @@ p {
   #booksgalerycontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.6fr 1fr 1fr;
-        grid-template-columns: 0.6fr 1fr 1fr;
+    -ms-grid-columns: 0.8fr 0.8fr 0.8fr;
+        grid-template-columns: 0.8fr 0.8fr 0.8fr;
         grid-template-areas: "header header header" "navbar booksgalery booksgalery" "footer footer footer";
   }
   #booksgalerycontainer .booksgalery {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.6fr 1fr 1fr;
-        grid-template-columns: 0.6fr 1fr 1fr;
+    -ms-grid-columns: 0.8fr 0.8fr 0.8fr;
+        grid-template-columns: 0.8fr 0.8fr 0.8fr;
         grid-template-areas: "galeryitem1 galeryitem1 galeryitem1" "galeryitem2 galeryitem3 galeryitem4" "galeryitem5 galeryitem6 galeryitem7";
   }
 }
@@ -662,8 +670,8 @@ p {
   #deliverycontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.6fr 1fr 1fr;
-        grid-template-columns: 0.6fr 1fr 1fr;
+    -ms-grid-columns: 0.8fr 0.8fr 0.8fr;
+        grid-template-columns: 0.8fr 0.8fr 0.8fr;
         grid-template-areas: "header header header" "navbar main main" "footer footer footer";
   }
   #deliverycontainer td {
@@ -677,6 +685,7 @@ p {
 body {
   background-color: #E6DDCD;
   font-family: Arial, Helvetica, sans-serif;
+  color: #040404;
 }
 
 @media screen and (max-width: 550px) {
