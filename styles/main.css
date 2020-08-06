@@ -149,8 +149,8 @@ p {
   #homegridcontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.8fr 0.8fr 0.8fr;
-        grid-template-columns: 0.8fr 0.8fr 0.8fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "header header header" "navbar main-picture main-picture" "main main sidebar" "main main sidebar" "footer footer footer";
   }
   #homegridcontainer .media h2 {
@@ -240,11 +240,39 @@ p {
   #booksgirdcontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.8fr 0.8fr 0.8fr;
-        grid-template-columns: 0.8fr 0.8fr 0.8fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "header header header" "navbar main main" "footer footer footer";
     grid-gap: 1rem;
   }
+}
+
+#contactgridcontainer form {
+  margin: 0 auto;
+  background: #EEE;
+  padding: 1rem;
+  border: 2px solid #6E4D19;
+  margin-bottom: 1rem;
+}
+
+#contactgridcontainer form label {
+  margin-left: 0.5rem;
+}
+
+#contactgridcontainer form legend {
+  margin-left: 0.5rem;
+}
+
+#contactgridcontainer .contactext {
+  margin-left: 3rem;
+}
+
+#contactgridcontainer .contactext p {
+  margin-top: £small-marging;
+}
+
+#contactgridcontainer .contactext p {
+  margin-top: 1rem;
 }
 
 #contactgridcontainer label {
@@ -297,10 +325,6 @@ p {
   grid-area: contactext;
 }
 
-#contactgridcontainer .contactext p {
-  margin-top: £small-marging;
-}
-
 #contactgridcontainer #contact {
   grid-area: contact;
 }
@@ -340,6 +364,10 @@ p {
   grid-area: footer;
 }
 
+#contactgridcontainer main {
+  grid-area: main;
+}
+
 @media screen and (max-width: 550px) {
   #contactgridcontainer {
     display: -ms-grid;
@@ -357,29 +385,12 @@ p {
         grid-template-areas: "contactext" "form";
     grid-gap: 1rem;
   }
-  #contactgridcontainer .contactext h2 {
-    margin-left: 2rem;
-    margin-bottom: 1rem;
-  }
   #contactgridcontainer form {
-    width: 80%;
-    margin: 0 auto;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: "contactext" "contact" "interest" "extra1" "extra2" "submit";
-    grid-gap: 1rem;
-    background: #EEE;
-    padding: 1rem;
-    border: 2px solid #6E4D19;
-    margin-bottom: 2rem;
-  }
-  #contactgridcontainer form label {
-    margin-left: 0.5rem;
-  }
-  #contactgridcontainer form legend {
-    margin-left: 0.5rem;
+        grid-template-areas: "contact" "interest" "extra1" "extra2" "submit";
   }
 }
 
@@ -395,36 +406,20 @@ p {
   #contactgridcontainer main {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        grid-template-areas: "contactext" "form";
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "contactext contactext" "form form";
     grid-gap: 1rem;
-  }
-  #contactgridcontainer .contactext {
-    margin-left: 3rem;
-  }
-  #contactgridcontainer .contactext p {
-    margin-top: 1rem;
   }
   #contactgridcontainer form {
     width: 60%;
     margin: 0 auto;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        grid-template-areas: "contactext" "contact" "interest" "extra1" "extra2" "submit";
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "contact contact" "interest interest" "extra1 extra1" "extra2 extra2" "submit submit";
     grid-gap: 1rem;
-    background: #EEE;
-    padding: 1rem;
-    border: 2px solid #6E4D19;
-    margin-bottom: 2rem;
-  }
-  #contactgridcontainer form label {
-    margin-left: 0.5rem;
-  }
-  #contactgridcontainer form legend {
-    margin-left: 0.5rem;
   }
 }
 
@@ -432,8 +427,8 @@ p {
   #contactgridcontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.8fr 0.8fr 0.8fr;
-        grid-template-columns: 0.8fr 0.8fr 0.8fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "header header header" "navbar main main" "footer footer footer";
     grid-gap: 1rem;
   }
@@ -449,19 +444,12 @@ p {
     margin-top: 1rem;
   }
   #contactgridcontainer form {
-    width: 87%;
+    max-width: 100%;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "contact interest" "contact extra1" "contact extra2" "submit submit";
-    grid-gap: 1rem;
-  }
-  #contactgridcontainer form label {
-    margin-left: 0.5rem;
-  }
-  #contactgridcontainer form legend {
-    margin-left: 0.5rem;
   }
 }
 
@@ -585,15 +573,15 @@ p {
   #booksgalerycontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.8fr 0.8fr 0.8fr;
-        grid-template-columns: 0.8fr 0.8fr 0.8fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "header header header" "navbar booksgalery booksgalery" "footer footer footer";
   }
   #booksgalerycontainer .booksgalery {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.8fr 0.8fr 0.8fr;
-        grid-template-columns: 0.8fr 0.8fr 0.8fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "galeryitem1 galeryitem1 galeryitem1" "galeryitem2 galeryitem3 galeryitem4" "galeryitem5 galeryitem6 galeryitem7";
   }
 }
@@ -670,8 +658,8 @@ p {
   #deliverycontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0.8fr 0.8fr 0.8fr;
-        grid-template-columns: 0.8fr 0.8fr 0.8fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "header header header" "navbar main main" "footer footer footer";
   }
   #deliverycontainer td {

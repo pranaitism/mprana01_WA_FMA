@@ -3,7 +3,6 @@
     label {
         margin-left: 0.5rem;
     }
-
     legend {
         margin-left: 0.5rem;
     }
@@ -13,24 +12,35 @@
     p {
         margin-top: £small-marging;
     }
-
 }
 
 #contactgridcontainer {
+    form {
+        @include center-block;
+        background: $form-bg;
+        padding: $large-padding;
+        border: 2px solid $border-colour;
+        margin-bottom: $small-margin;
+        @include left-label-legend;
+    }
+    .contactext {
+        @include top-space-p;
+        margin-left: 3rem;
+        p {
+            margin-top: 1rem;
+        }
+    }
     label {
         display: block;
     }
-
     textarea {
         width: 95%;
         height: 7rem;
     }
-
     button {
         background: $brand-color;
         padding: $large-padding;
     }
-
     input,
     select {
         width: 92%;
@@ -38,7 +48,6 @@
         margin: $small-margin/2 0;
         margin-left: $small-padding;
     }
-
     input[type=checkbox],
     input[type=radio] {
         vertical-align: middle;
@@ -46,176 +55,109 @@
         -webkit-transform: scale(1.5);
         transform: scale(1.5);
     }
-
     fieldset {
         border: 1px solid $border-colour;
     }
-
-
     //form required and constraint validation
     form {
         p {
             color: $form-red;
         }
     }
-
-
+    //html validation
     input:invalid:focus {
         outline: 2px solid $form-red;
     }
-
     input:valid:focus:not([type=radio]):not([type=checkbox]) {
         outline: 2px solid $brand-color;
     }
-
-
-
     .contactext {
         grid-area: contactext;
-        @include top-space-p;
     }
-
     #contact {
         grid-area: contact;
     }
-
     #interest {
         grid-area: interest;
     }
-
     #extra1 {
         grid-area: extra1;
     }
-
     #extra2 {
         grid-area: extra2;
     }
-
     #submit {
         grid-area: submit;
         color: $footer-links-color;
         font-weight: 700;
         text-transform: uppercase;
     }
-
     //grid areas
-
-
     header {
         grid-area: header;
     }
-
     #navbar {
         grid-area: navbar;
     }
-
     form {
         grid-area: form;
     }
-
     footer {
         grid-area: footer;
     }
-
- 
-
-
-
+    main {
+        grid-area: main;
+    }
     // media queries
     @include mobile {
         @include single-column-grid;
         grid-template-areas: "header""main""navbar""footer";
         grid-gap: $medium-gridgap;
-
         main {
             @include single-column-grid;
             grid-template-areas: "contactext""form";
             grid-gap: $medium-gridgap;
         }
-
-        .contactext {
-            h2 {
-                margin-left: 2rem;
-                margin-bottom: 1rem;
-            }
-        }
-
         form {
-            width: 80%;
-            @include center-block;
             @include single-column-grid;
-            grid-template-areas: "contactext""contact""interest""extra1""extra2""submit";
-            grid-gap: $medium-gridgap;
-            background: $form-bg;
-            padding: $large-padding;
-            border: 2px solid $border-colour;
-            margin-bottom: 2rem;
-            @include left-label-legend;
+            grid-template-areas: "contact""interest""extra1""extra2""submit";
         }
-
     }
-
     @include tablet {
         @include two-column-grid;
         grid-template-areas: "header header""main main""navbar navbar""footer footer";
         grid-gap: $medium-gridgap;
-
         main {
-            @include single-column-grid;
-            grid-template-areas: "contactext""form";
+            @include two-column-grid;
+            grid-template-areas: "contactext contactext""form form";
             grid-gap: $medium-gridgap;
         }
-
-        .contactext {
-            margin-left: 3rem;
-
-            p {
-                margin-top: 1rem;
-            }
-
-        }
-
         form {
             width: 60%;
             @include center-block;
-            @include single-column-grid;
-            grid-template-areas: "contactext""contact""interest""extra1""extra2""submit";
+            @include two-column-grid;
+            grid-template-areas: "contact contact""interest interest""extra1 extra1""extra2 extra2""submit submit";
             grid-gap: $medium-gridgap;
-            background: $form-bg;
-            padding: $large-padding;
-            border: 2px solid $border-colour;
-            margin-bottom: 2rem;
-            @include left-label-legend;
         }
     }
-
     @include desktop {
         @include three-column-grid;
         grid-template-areas: "header header header""navbar main main""footer footer footer";
         grid-gap: $medium-gridgap;
-
         main {
             @include two-column-grid;
             grid-template-areas: "contactext contactext""form form";
             grid-gap: $medium-gridgap
         }
-
         .contactext {
-
             p {
                 margin-top: $small-margin;
             }
         }
-
         form {
-            width: 87%;
+            max-width: 100%;
             @include two-column-grid;
             grid-template-areas: "contact interest""contact extra1""contact extra2""submit submit";
-            grid-gap: $medium-gridgap;
-            @include left-label-legend;
         }
     }
-
-
-
 }
