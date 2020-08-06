@@ -1,83 +1,69 @@
-.galeryitem1 {
-    grid-area: galeryitem1;
-}
-
-.galeryitem2 {
-    grid-area: galeryitem2;
-
-}
-
-.galeryitem3 {
-    grid-area: galeryitem3;
-}
-
-.galeryitem4 {
-    grid-area: galeryitem4;
-}
-
-.galeryitem5 {
-    grid-area: galeryitem5;
-}
-
-.galeryitem6 {
-    grid-area: galeryitem6;
-}
-
-.galeryitem7 {
-    grid-area: galeryitem7;
-}
-
-
-
-#19ctgridcontainer {
-
+#booksgalerycontainer {
     header {
         grid-area: header;
     }
-
     .booksgalery {
         grid-area: booksgalery;
     }
-
     #navbar {
         grid-area: navbar;
     }
-
     footer {
         grid-area: footer;
     }
-
-
+    .galeryitem1 {
+        grid-area: galeryitem1;
+    }
+    .galeryitem2 {
+        grid-area: galeryitem2;
+    }
+    .galeryitem3 {
+        grid-area: galeryitem3;
+    }
+    .galeryitem4 {
+        grid-area: galeryitem4;
+    }
+    .galeryitem5 {
+        grid-area: galeryitem5;
+    }
+    .galeryitem6 {
+        grid-area: galeryitem6;
+    }
+    .galeryitem7 {
+        grid-area: galeryitem7;
+    }
+    figure {
+        @include img-darken;
+        text-align: left;
+    }
+    article {
+        width: 80%;
+    }
     @include mobile {
         @include single-column-grid;
         grid-template-areas: "header""booksgalery""navbar""footer";
         grid-gap: 1rem;
     }
-
     .booksgalery {
         @include single-column-grid;
         grid-template-areas: "galeryitem1""galeryitem2""galeryitem3""galeryitem4""galeryitem5""galeryitem6""galeryitem7";
+        grid-gap: 1rem;
     }
-
     @include tablet {
         @include two-column-grid;
         grid-template-areas: "header header""booksgalery booksgalery""navbar navbar""footer footer";
-
+        grid-gap: 1rem;
         .booksgalery {
             @include two-column-grid;
             grid-template-areas: "galeryitem1 galeryitem1""galeryitem2 galeryitem3""galeryitem4 galeryitem5""galeryitem6 galeryitem7";
         }
     }
-
     @include desktop {
         @include three-column-grid;
-        grid-template-areas: "header header""navbar booksgalery""footer footer";
-
+        grid-template-areas: "header header header""navbar booksgalery booksgalery""footer footer footer";
         .booksgalery {
             @include three-column-grid;
             grid-template-areas: "galeryitem1 galeryitem1 galeryitem1" "galeryitem2 galeryitem3 galeryitem4" "galeryitem5 galeryitem6 galeryitem7";
         }
     }
-
-
 }

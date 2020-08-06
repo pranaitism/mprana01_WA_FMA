@@ -149,8 +149,8 @@ p {
   #homegridcontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 0.6fr 1fr 1fr;
+        grid-template-columns: 0.6fr 1fr 1fr;
         grid-template-areas: "header header header" "navbar main-picture main-picture" "main main sidebar" "main main sidebar" "footer footer footer";
   }
   #homegridcontainer .media h2 {
@@ -274,8 +274,8 @@ main p {
   #booksgirdcontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 0.6fr 1fr 1fr;
+        grid-template-columns: 0.6fr 1fr 1fr;
         grid-template-areas: " header header header" "navbar main main" "main main main" "footer footer footer";
     grid-gap: 1rem;
     -webkit-box-pack: space-evenly;
@@ -502,8 +502,8 @@ main p {
   #contactgridcontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 0.6fr 1fr 1fr;
+        grid-template-columns: 0.6fr 1fr 1fr;
         grid-template-areas: "header header header" "navbar main main" "footer footer footer";
     grid-gap: 1rem;
   }
@@ -535,66 +535,78 @@ main p {
   }
 }
 
-.galeryitem1 {
+#booksgalerycontainer header {
+  grid-area: header;
+}
+
+#booksgalerycontainer .booksgalery {
+  grid-area: booksgalery;
+}
+
+#booksgalerycontainer #navbar {
+  grid-area: navbar;
+}
+
+#booksgalerycontainer footer {
+  grid-area: footer;
+}
+
+#booksgalerycontainer .galeryitem1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: galeryitem1;
 }
 
-.galeryitem2 {
+#booksgalerycontainer .galeryitem2 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: galeryitem2;
 }
 
-.galeryitem3 {
+#booksgalerycontainer .galeryitem3 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: galeryitem3;
 }
 
-.galeryitem4 {
+#booksgalerycontainer .galeryitem4 {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: galeryitem4;
 }
 
-.galeryitem5 {
+#booksgalerycontainer .galeryitem5 {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: galeryitem5;
 }
 
-.galeryitem6 {
+#booksgalerycontainer .galeryitem6 {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: galeryitem6;
 }
 
-.galeryitem7 {
+#booksgalerycontainer .galeryitem7 {
   -ms-grid-row: 7;
   -ms-grid-column: 1;
   grid-area: galeryitem7;
 }
 
-#19ctgridcontainer header {
-  grid-area: header;
+#booksgalerycontainer figure {
+  text-align: left;
 }
 
-#19ctgridcontainer .booksgalery {
-  grid-area: booksgalery;
+#booksgalerycontainer figure img {
+  mix-blend-mode: darken;
 }
 
-#19ctgridcontainer #navbar {
-  grid-area: navbar;
-}
-
-#19ctgridcontainer footer {
-  grid-area: footer;
+#booksgalerycontainer article {
+  width: 80%;
 }
 
 @media screen and (max-width: 600px) {
-  #19ctgridcontainer {
+  #booksgalerycontainer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
@@ -604,23 +616,25 @@ main p {
   }
 }
 
-#19ctgridcontainer .booksgalery {
+#booksgalerycontainer .booksgalery {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
       grid-template-areas: "galeryitem1" "galeryitem2" "galeryitem3" "galeryitem4" "galeryitem5" "galeryitem6" "galeryitem7";
+  grid-gap: 1rem;
 }
 
 @media screen and (min-width: 601px) {
-  #19ctgridcontainer {
+  #booksgalerycontainer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "header header" "booksgalery booksgalery" "navbar navbar" "footer footer";
+    grid-gap: 1rem;
   }
-  #19ctgridcontainer .booksgalery {
+  #booksgalerycontainer .booksgalery {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
@@ -630,42 +644,38 @@ main p {
 }
 
 @media screen and (min-width: 1024px) {
-  #19ctgridcontainer {
+  #booksgalerycontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "header header" "navbar booksgalery" "footer footer";
+    -ms-grid-columns: 0.6fr 1fr 1fr;
+        grid-template-columns: 0.6fr 1fr 1fr;
+        grid-template-areas: "header header header" "navbar booksgalery booksgalery" "footer footer footer";
   }
-  #19ctgridcontainer .booksgalery {
+  #booksgalerycontainer .booksgalery {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 0.6fr 1fr 1fr;
+        grid-template-columns: 0.6fr 1fr 1fr;
         grid-template-areas: "galeryitem1 galeryitem1 galeryitem1" "galeryitem2 galeryitem3 galeryitem4" "galeryitem5 galeryitem6 galeryitem7";
   }
-}
-
-#deliverycontainer P {
-  margin: 0 auto;
 }
 
 #deliverycontainer table {
   border-collapse: collapse;
   border: 1px solid #000;
-  width: 60%;
+  width: 65%;
   text-align: center;
-  margin: 0 auto;
+  margin-left: 1rem;
 }
 
 #deliverycontainer th,
 #deliverycontainer td {
-  padding: 0.5rem 1rem;
   border: 1px solid #000;
+  padding: 0.1rem;
 }
 
 #deliverycontainer caption {
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
@@ -685,8 +695,9 @@ main p {
   grid-area: navbar;
 }
 
-#deliverycontainer main {
-  grid-area: main;
+#deliverycontainer main .deliveryinfo {
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 #deliverycontainer footer {
@@ -702,15 +713,6 @@ main p {
         grid-template-areas: "header" "main" "navbar" "footer";
     grid-gap: 1rem;
   }
-  #deliverycontainer table tr {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 
 @media screen and (min-width: 601px) {
@@ -721,15 +723,24 @@ main p {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "header header" "main main" "navbar navbar" "footer footer ";
   }
+  #deliverycontainer td {
+    padding: 0.25rem 0.5rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   #deliverycontainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "header header header" "navbar navbar navbar" "main main main" "footer footer footer";
+    -ms-grid-columns: 0.6fr 1fr 1fr;
+        grid-template-columns: 0.6fr 1fr 1fr;
+        grid-template-areas: "header header header" "navbar main main" "footer footer footer";
+  }
+  #deliverycontainer td {
+    padding: 1rem 1rem;
+  }
+  #deliverycontainer caption {
+    font-size: 1.1rem;
   }
 }
 
@@ -756,6 +767,7 @@ body {
 
 h1 {
   font-weight: lighter;
+  font-family: Parisian;
 }
 
 h2 {
@@ -843,6 +855,12 @@ footer p span {
   font-size: large;
 }
 
+@media screen and (min-width: 1024px) {
+  footer .top-links {
+    visibility: hidden;
+  }
+}
+
 #menubutton {
   list-style: none;
   text-decoration: none;
@@ -865,13 +883,25 @@ footer p span {
   text-align: center;
 }
 
+@media screen and (min-width: 601px) {
+  #navbar {
+    margin-left: 5rem;
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #navbar {
+    margin-left: 1rem;
+  }
+}
+
 #navbar ul li {
   margin: 0.4rem;
-  padding: 0.5rem;
+  padding: 0.4rem;
   background-color: #6D7B42;
   border: groove;
   display: block;
-  margin-left: 1.5rem;
 }
 
 #navbar ul li:hover > ul {
