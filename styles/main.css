@@ -760,7 +760,7 @@ body {
 
 @media screen and (min-width: 601px) {
   body {
-    line-height: 1.5rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -799,6 +799,7 @@ header {
 header h2 {
   position: relative;
   text-decoration: none;
+  font-family: Parisian;
 }
 
 header .img {
