@@ -23,7 +23,7 @@ body {
 }
 
 main {
-    padding: 1rem;
+    padding: $large-padding;
 }
 
 h1 {
@@ -43,6 +43,8 @@ a {
 }
 
 #navbar {
+    @include center-block;
+    width: decimal-width(5);
     text-align: center;
     ul {
         li {
@@ -74,13 +76,16 @@ a {
                     display: block;
                 }
                 li {
-                    width: 90%;
+                    width: decimal-width(9);
                 }
             }
         }
     }
     @include tablet {
-        width: 50%;
+        width: decimal-width(5);
     }
-    @include desktop {}
+    @include desktop {
+        width: decimal-width(4.5);
+        margin: 0;
+    }
 }
