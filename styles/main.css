@@ -122,7 +122,7 @@ footer p span {
 }
 
 #homegridcontainer .main-picture img {
-  width: 80%;
+  width: 90%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -137,18 +137,20 @@ footer p span {
 }
 
 #homegridcontainer .sidebar figure img {
-  width: 30%;
+  max-width: 40%;
   height: auto;
 }
 
 #homegridcontainer .main h1 {
-  margin: 1rem;
+  margin-left: 2rem;
   text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: 600;
 }
 
 #homegridcontainer .main h2, #homegridcontainer .main h3 {
   margin: 1rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 #homegridcontainer .main P {
@@ -166,7 +168,9 @@ footer p span {
 #homegridcontainer video {
   max-width: 90%;
   height: auto;
-  margin-left: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #homegridcontainer header {
@@ -199,6 +203,7 @@ footer p span {
 
 #homegridcontainer .selling {
   grid-area: selling;
+  margin-top: 1rem;
 }
 
 #homegridcontainer .buying {
@@ -234,7 +239,7 @@ footer p span {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "header header" "main-picture main-picture" "main main" "navbar navbar" "footer footer";
-    grid-gap: 2rem;
+    grid-gap: 1rem;
   }
   #homegridcontainer main {
     display: -ms-grid;
@@ -243,8 +248,11 @@ footer p span {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "media selling" "buying valuing" "sidebar sidebar";
   }
-  #homegridcontainer figure img {
+  #homegridcontainer .sidebar figure img {
     max-width: 20%;
+  }
+  #homegridcontainer .sidebar-feature1 p {
+    width: 40%;
   }
 }
 
