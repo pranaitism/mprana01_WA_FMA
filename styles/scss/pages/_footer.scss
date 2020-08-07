@@ -2,6 +2,7 @@
 footer {
     background-color: $brand-color;
     a {
+        line-height: $line-height;
         color: $footer-links-color;
     }
     li {
@@ -10,8 +11,7 @@ footer {
     }
     p {
         color: $footer-links-color;
-        //font-weight: lighter;
-        //margin: $medium-margin;
+        margin: $medium-margin;
         span {
             font-family: Parisian;
             font-size: large;

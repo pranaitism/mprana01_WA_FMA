@@ -82,6 +82,7 @@ footer {
 }
 
 footer a {
+  line-height: 1.8;
   color: #FFFFFF;
 }
 
@@ -92,6 +93,7 @@ footer li {
 
 footer p {
   color: #FFFFFF;
+  margin: 1rem;
 }
 
 footer p span {
