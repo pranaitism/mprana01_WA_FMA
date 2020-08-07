@@ -20,6 +20,7 @@ body {
 }
 
 header {
+  display: inline-block;
   padding: 1rem;
 }
 
@@ -75,6 +76,12 @@ header ul {
 
 #menubutton a:hover {
   background: #CECACA;
+}
+
+@media screen and (min-width: 1024px) {
+  #menubutton {
+    display: none;
+  }
 }
 
 footer {
@@ -817,8 +824,8 @@ a {
 }
 
 #navbar ul li {
-  margin: 0.4rem;
-  padding: 0.4rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   background-color: #6D7B42;
   border: groove;
   display: block;
@@ -847,7 +854,6 @@ a {
 #navbar ul li ul:hover {
   visibility: visible;
   opacity: 1;
-  display: block;
 }
 
 #navbar ul li ul li {

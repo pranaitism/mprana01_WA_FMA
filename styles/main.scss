@@ -56,8 +56,8 @@ a {
                     background: $background-color;
                 }
             }
-            margin: 0.4rem;
-            padding: 0.4rem;
+            margin: $small-margin;
+            padding: $small-padding;
             background-color: $menu-button-color;
             border: groove;
             @include block-elem;
@@ -73,7 +73,6 @@ a {
                 &:hover {
                     visibility: visible;
                     opacity: 1;
-                    display: block;
                 }
                 li {
                     width: decimal-width(9);

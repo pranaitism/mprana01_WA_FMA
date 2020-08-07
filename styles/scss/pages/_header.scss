@@ -1,4 +1,5 @@
 header {
+    display: inline-block;
     padding: $large-padding;
     h2 {
         position: relative;
@@ -43,5 +44,8 @@ header {
     padding: 0.1rem;
     a:hover {
         background: $link-hover-bg;
+    }
+    @include desktop {
+        display: none;
     }
 }
