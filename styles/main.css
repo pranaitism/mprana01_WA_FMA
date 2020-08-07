@@ -355,11 +355,11 @@ footer p span {
 }
 
 #contactgridcontainer form label {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 
 #contactgridcontainer form legend {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 
 #contactgridcontainer .contactext {
@@ -443,7 +443,7 @@ footer p span {
 #contactgridcontainer #submit {
   grid-area: submit;
   color: #FFFFFF;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -485,7 +485,8 @@ footer p span {
     grid-gap: 1rem;
   }
   #contactgridcontainer form {
-    width: 70%;
+    width: 75%;
+    min-width: 50%;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
