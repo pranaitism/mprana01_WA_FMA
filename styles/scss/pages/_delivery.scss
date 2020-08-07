@@ -2,19 +2,19 @@
             //code has been used from class material
             table {
                 border-collapse: collapse;
-                border: 1px solid #000;
+                border: 1px solid $border-cl;
                 width: 65%;
                 text-align: center;
                 margin-left: $medium-margin;
             }
             th,
             td {
-                border: 1px solid #000;
+                border: 1px solid $border-cl;
                 padding: 0.1rem;
             }
             caption {
                 font-size: 1.2rem;
-                margin-bottom: $medium-margin/2;
+                margin-bottom: $medium-margin;
             }
             th {
                 background-color: $table-bg;
@@ -22,6 +22,14 @@
             tr:first-child {
                 background-color: $table-bg;
             }
+            .deliveryinfo {
+                margin-top: $medium-margin;
+                margin-left: $medium-margin;
+                span {
+                    line-height: random($limit: 2);
+                }
+            }
+            //grid areas
             header {
                 grid-area: header;
             }
@@ -29,10 +37,7 @@
                 grid-area: navbar;
             }
             main {
-                .deliveryinfo {
-                    margin-top: $medium-margin;
-                    margin-left: $medium-margin;
-                }
+                grid-area: main;
             }
             footer {
                 grid-area: footer;
@@ -40,7 +45,7 @@
             @include mobile {
                 @include single-column-grid;
                 grid-template-areas: "header" "main" "navbar" "footer";
-                grid-gap: 1rem;
+                grid-gap: $medium-gridgap;
             }
             @include tablet {
                 @include two-column-grid;
@@ -51,7 +56,7 @@
             }
             @include desktop {
                 @include three-column-grid;
-                grid-template-areas: "header header header" "navbar main main" "footer footer footer";
+                grid-template-areas: "header header header" "navbar main." "footer footer footer";
                 td {
                     padding: $medium-margin $large-padding;
                 }

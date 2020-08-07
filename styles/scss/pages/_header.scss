@@ -1,6 +1,4 @@
 header {
-    display: inline-flex;
-    justify-content: space-between;
     padding: $large-padding;
     h2 {
         position: relative;
@@ -20,7 +18,7 @@ header {
     ul {
         @include hide-element;
         @include desktop {
-            display: inline-flex;
+            display: flex;
             @include bulletless-list;
             li {
                 padding: 1rem;

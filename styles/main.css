@@ -21,12 +21,6 @@ body {
 }
 
 header {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 1rem;
 }
 
@@ -54,9 +48,9 @@ header ul {
 
 @media screen and (min-width: 1024px) {
   header ul {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     list-style: none;
   }
   header ul li {
@@ -705,7 +699,7 @@ footer p span {
 
 #deliverycontainer caption {
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 #deliverycontainer th {
@@ -716,6 +710,15 @@ footer p span {
   background-color: #a6a7a8;
 }
 
+#deliverycontainer .deliveryinfo {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+#deliverycontainer .deliveryinfo span {
+  line-height: 2;
+}
+
 #deliverycontainer header {
   grid-area: header;
 }
@@ -724,9 +727,8 @@ footer p span {
   grid-area: navbar;
 }
 
-#deliverycontainer main .deliveryinfo {
-  margin-top: 1rem;
-  margin-left: 1rem;
+#deliverycontainer main {
+  grid-area: main;
 }
 
 #deliverycontainer footer {
@@ -763,7 +765,7 @@ footer p span {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "header header header" "navbar main main" "footer footer footer";
+        grid-template-areas: "header header header" "navbar main." "footer footer footer";
   }
   #deliverycontainer td {
     padding: 1rem 1rem;
