@@ -12,17 +12,15 @@
 @import 'scss/pages/delivery';
 //Styling for all pages
 body {
+    @include responsive-font;
+    @include responsive-line-height;
     background-color: $background-color;
     font-family: Arial, Helvetica, sans-serif;
     color: #040404;
     @include mobile {
-        line-height: 1.30rem;
         .main-picture {
             display: none;
         }
-    }
-    @include tablet {
-        line-height: 1.25rem;
     }
 }
 
@@ -82,35 +80,6 @@ header {
     }
 }
 
-// FOOTER
-footer {
-    background-color: $brand-color;
-    a {
-        font-weight: lighter;
-        color: $footer-links-color;
-    }
-    li {
-        @include bulletless-list;
-        margin: $small-margin;
-        @include center-text;
-    }
-    p {
-        color: $footer-links-color;
-        font-weight: lighter;
-        margin: $small-margin;
-        span {
-            font-family: Parisian;
-            font-size: large;
-        }
-    }
-    @include desktop {
-        .top-links {
-            visibility: hidden;
-            height: 0;
-        }
-    }
-}
-
 #menubutton {
     @include bulletless-list;
     @include no-underline-link;
@@ -130,13 +99,6 @@ footer {
 #navbar {
     width: 65%;
     text-align: center;
-    @include tablet {
-        margin-left: 5rem;
-        width: 70%;
-    }
-    @include desktop {
-        margin-left: 1rem;
-    }
     ul {
         li {
             &:hover {
@@ -171,5 +133,12 @@ footer {
                 }
             }
         }
+    }
+    @include tablet {
+        margin-left: 5rem;
+        width: 70%;
+    }
+    @include desktop {
+        margin-left: 1rem;
     }
 }

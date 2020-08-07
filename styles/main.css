@@ -14,6 +14,42 @@
   src: local("../fonts/parisr.woff") format("woff");
 }
 
+footer {
+  background-color: #236841;
+}
+
+footer a {
+  font-weight: lighter;
+  color: #FFFFFF;
+}
+
+footer li {
+  list-style: none;
+  margin: 1rem;
+  text-align: center;
+}
+
+footer p {
+  color: #FFFFFF;
+  font-weight: lighter;
+  margin: 1rem;
+}
+
+footer p span {
+  font-family: Parisian;
+  font-size: large;
+}
+
+@media screen and (min-width: 1024px) {
+  footer .top-links {
+    visibility: hidden;
+    height: 0;
+  }
+  footer .bottom-links {
+    font-size: small;
+  }
+}
+
 #homegridcontainer .main-picture img {
   mix-blend-mode: darken;
 }
@@ -654,23 +690,16 @@
 }
 
 body {
+  font-size: calc(16px + (19 - 16) * ((100vw - 500px) / (1800 - 500)));
+  line-height: calc(1.3rem + (1.5 - 1.2) * ((100vw - 500px)/(1800 - 500)));
   background-color: #E6DDCD;
   font-family: Arial, Helvetica, sans-serif;
   color: #040404;
 }
 
 @media screen and (max-width: 600px) {
-  body {
-    line-height: 1.30rem;
-  }
   body .main-picture {
     display: none;
-  }
-}
-
-@media screen and (min-width: 601px) {
-  body {
-    line-height: 1.25rem;
   }
 }
 
@@ -743,39 +772,6 @@ header ul {
   }
 }
 
-footer {
-  background-color: #236841;
-}
-
-footer a {
-  font-weight: lighter;
-  color: #FFFFFF;
-}
-
-footer li {
-  list-style: none;
-  margin: 1rem;
-  text-align: center;
-}
-
-footer p {
-  color: #FFFFFF;
-  font-weight: lighter;
-  margin: 1rem;
-}
-
-footer p span {
-  font-family: Parisian;
-  font-size: large;
-}
-
-@media screen and (min-width: 1024px) {
-  footer .top-links {
-    visibility: hidden;
-    height: 0;
-  }
-}
-
 #menubutton {
   list-style: none;
   text-decoration: none;
@@ -796,19 +792,6 @@ footer p span {
 #navbar {
   width: 65%;
   text-align: center;
-}
-
-@media screen and (min-width: 601px) {
-  #navbar {
-    margin-left: 5rem;
-    width: 70%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #navbar {
-    margin-left: 1rem;
-  }
 }
 
 #navbar ul li {
@@ -847,5 +830,18 @@ footer p span {
 
 #navbar ul li ul li {
   width: 90%;
+}
+
+@media screen and (min-width: 601px) {
+  #navbar {
+    margin-left: 5rem;
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #navbar {
+    margin-left: 1rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
