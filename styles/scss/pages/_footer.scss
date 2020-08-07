@@ -2,18 +2,16 @@
 footer {
     background-color: $brand-color;
     a {
-        font-weight: lighter;
         color: $footer-links-color;
     }
     li {
         @include bulletless-list;
-        margin: $small-margin;
         @include center-text;
     }
     p {
         color: $footer-links-color;
-        font-weight: lighter;
-        margin: $small-margin;
+        //font-weight: lighter;
+        //margin: $medium-margin;
         span {
             font-family: Parisian;
             font-size: large;
@@ -24,6 +22,7 @@ footer {
             @include hide-links;
         }
         .bottom-links {
+            margin-top: $medium-margin;
             font-size: small;
         }
     }

@@ -89,20 +89,16 @@ footer {
 }
 
 footer a {
-  font-weight: lighter;
   color: #FFFFFF;
 }
 
 footer li {
   list-style: none;
-  margin: 0.5;
   text-align: center;
 }
 
 footer p {
   color: #FFFFFF;
-  font-weight: lighter;
-  margin: 0.5;
 }
 
 footer p span {
@@ -116,6 +112,7 @@ footer p span {
     height: 0;
   }
   footer .bottom-links {
+    margin-top: 1rem;
     font-size: small;
   }
 }
@@ -131,22 +128,31 @@ footer p span {
   margin-right: auto;
 }
 
+#homegridcontainer .sidebar figure {
+  margin-left: 1rem;
+}
+
 #homegridcontainer .sidebar figure img {
   mix-blend-mode: darken;
 }
 
+#homegridcontainer .sidebar figure img {
+  width: 30%;
+  height: auto;
+}
+
 #homegridcontainer .main h1 {
-  margin: 0.5;
+  margin: 1rem;
   text-transform: uppercase;
 }
 
 #homegridcontainer .main h2, #homegridcontainer .main h3 {
-  margin: 0.5;
+  margin: 1rem;
   margin-top: 2rem;
 }
 
 #homegridcontainer .main P {
-  margin: 0.5;
+  margin: 1rem;
 }
 
 #homegridcontainer .main ul {
@@ -160,7 +166,7 @@ footer p span {
 #homegridcontainer video {
   max-width: 90%;
   height: auto;
-  margin-left: 0.5;
+  margin-left: 1rem;
 }
 
 #homegridcontainer header {
@@ -237,6 +243,9 @@ footer p span {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "media selling" "buying valuing" "sidebar sidebar";
   }
+  #homegridcontainer figure img {
+    max-width: 20%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -286,7 +295,7 @@ footer p span {
 }
 
 #booksgirdcontainer .pictures {
-  margin-top: 0.5;
+  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,7 +350,7 @@ footer p span {
   background: #EEE;
   padding: 1rem;
   border: 2px solid #6E4D19;
-  margin-bottom: 0.5;
+  margin-bottom: 1rem;
 }
 
 #contactgridcontainer form label {
@@ -382,7 +391,7 @@ footer p span {
 #contactgridcontainer select {
   width: 92%;
   padding: 0.5rem;
-  margin: 0.25 0;
+  margin: 0.5rem 0;
   margin-left: 0.5rem;
 }
 
@@ -530,7 +539,7 @@ footer p span {
     grid-gap: 1rem;
   }
   #contactgridcontainer .contactext p {
-    margin-top: 0.5;
+    margin-top: 1rem;
   }
   #contactgridcontainer form {
     max-width: 100%;
@@ -676,7 +685,7 @@ footer p span {
   border: 1px solid #000;
   width: 65%;
   text-align: center;
-  margin-left: 0.5;
+  margin-left: 1rem;
 }
 
 #deliverycontainer th,
@@ -687,7 +696,7 @@ footer p span {
 
 #deliverycontainer caption {
   font-size: 1.2rem;
-  margin-bottom: 0.25;
+  margin-bottom: 0.5rem;
 }
 
 #deliverycontainer th {
@@ -707,8 +716,8 @@ footer p span {
 }
 
 #deliverycontainer main .deliveryinfo {
-  margin-top: 0.5;
-  margin-left: 0.5;
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 #deliverycontainer footer {
@@ -748,7 +757,7 @@ footer p span {
         grid-template-areas: "header header header" "navbar main main" "footer footer footer";
   }
   #deliverycontainer td {
-    padding: 0.5 1rem;
+    padding: 1rem 1rem;
   }
   #deliverycontainer caption {
     font-size: 1.1rem;
@@ -764,11 +773,6 @@ body {
   body .main-picture {
     display: none;
   }
-}
-
-#pagecontainer {
-  width: 95%;
-  margin: auto;
 }
 
 h1 {

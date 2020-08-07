@@ -20,7 +20,7 @@
         background: $form-bg;
         padding: $large-padding;
         border: 2px solid $border-colour;
-        margin-bottom: $small-margin;
+        margin-bottom: $medium-margin;
         @include left-label-legend;
     }
     .contactext {
@@ -45,7 +45,7 @@
     select {
         width: 92%;
         padding: $small-padding;
-        margin: $small-margin/2 0;
+        margin: $medium-margin/2 0;
         margin-left: $small-padding;
     }
     input[type=checkbox],
@@ -151,7 +151,7 @@
         }
         .contactext {
             p {
-                margin-top: $small-margin;
+                margin-top: $medium-margin;
             }
         }
         form {

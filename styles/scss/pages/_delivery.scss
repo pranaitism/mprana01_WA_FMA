@@ -5,7 +5,7 @@
                 border: 1px solid #000;
                 width: 65%;
                 text-align: center;
-                margin-left: $small-margin;
+                margin-left: $medium-margin;
             }
             th,
             td {
@@ -14,7 +14,7 @@
             }
             caption {
                 font-size: 1.2rem;
-                margin-bottom: $small-margin/2;
+                margin-bottom: $medium-margin/2;
             }
             th {
                 background-color: $table-bg;
@@ -30,8 +30,8 @@
             }
             main {
                 .deliveryinfo {
-                    margin-top: $small-margin;
-                    margin-left: $small-margin;
+                    margin-top: $medium-margin;
+                    margin-left: $medium-margin;
                 }
             }
             footer {
@@ -53,7 +53,7 @@
                 @include three-column-grid;
                 grid-template-areas: "header header header" "navbar main main" "footer footer footer";
                 td {
-                    padding: $small-margin $large-padding;
+                    padding: $medium-margin $large-padding;
                 }
                 caption {
                     font-size: 1.1rem;
