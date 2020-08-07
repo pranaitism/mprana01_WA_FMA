@@ -1,11 +1,28 @@
 $line-height: 1.4;
 $line-spacing: 0.2rem;
-$base-font: "Arial",
+$base-font: Arial,
+Helvetica,
 sans-serif;
+// responsive font and line height
+@mixin responsive-font {
+    //https://css-tricks.com/books/fundamental-css-tactics/scale-typography-screen-size/
+    font-size: calc(16px + (19 - 16) * ((100vw - 500px) / (1800 - 500)));
+}
+
+@mixin responsive-line-height {
+    line-height: calc(1.3rem + (1.5 - 1.2) * ((100vw - 500px)/(1800 - 500)));
+}
+
 @font-face {
     font-family: 'Parisian';
     src: local('../fonts/parisr.eot') format('eot');
     src: local('../fonts/parisr.svg') format('svg');
     src: local('../fonts/parisr.ttf') format('tff');
     src: local('../fonts/parisr.woff') format('woff');
+}
+
+body {
+    @include responsive-font;
+    @include responsive-line-height;
+    font-family: $base-font;
 }

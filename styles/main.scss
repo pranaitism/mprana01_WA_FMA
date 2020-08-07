@@ -4,6 +4,7 @@
 @import 'scss/functions';
 @import 'scss/colors';
 @import 'scss/mixins';
+@import 'scss/pages/header';
 @import 'scss/pages/footer';
 @import 'scss/pages/home';
 @import 'scss/pages/books';
@@ -12,10 +13,7 @@
 @import 'scss/pages/delivery';
 //Styling for all pages
 body {
-    @include responsive-font;
-    @include responsive-line-height;
     background-color: $background-color;
-    font-family: Arial, Helvetica, sans-serif;
     color: #040404;
     @include mobile {
         .main-picture {
