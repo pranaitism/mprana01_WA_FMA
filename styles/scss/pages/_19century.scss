@@ -1,5 +1,4 @@
 #booksgalerycontainer {
-    margin-left: small-margin;
     //define grid areas
     header {
         grid-area: header;
@@ -36,10 +35,10 @@
         grid-area: galeryitem7;
     }
     em {
-        color: darken($color: grey, $amount: 30%)
+        color: darken($color: $books-price-colour, $amount: 30%)
     }
     p {
-        margin-top: $small-margin;
+        margin-top: $medium-margin;
     }
     // darken pictures
     figure {

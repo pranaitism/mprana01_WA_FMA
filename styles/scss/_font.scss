@@ -10,7 +10,7 @@ sans-serif;
 }
 
 @mixin responsive-line-height {
-    line-height: calc(1.3rem + (1.5 - 1.2) * ((100vw - 500px)/(1800 - 500)));
+    line-height: calc(1.2rem + (1.5 - 1.2) * ((100vw - 500px)/(1800 - 500)));
 }
 
 @font-face {

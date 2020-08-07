@@ -14,7 +14,7 @@
 //Styling for all pages
 body {
     background-color: $background-color;
-    color: #040404;
+    color: $font-color;
     @include mobile {
         .main-picture {
             display: none;
@@ -23,7 +23,8 @@ body {
 }
 
 #pagecontainer {
-    @include center-block;
+    width: 95%;
+    margin: auto;
 }
 
 h1 {
@@ -33,7 +34,6 @@ h1 {
 
 h2 {
     font-family: Parisian;
-    font-weight: lighter;
     text-decoration: underline;
     text-decoration-color: $brand-color;
 }
@@ -43,59 +43,7 @@ a {
     @include no-underline-link;
 }
 
-//header
-header {
-    display: inline-flex;
-    justify-content: space-between;
-    padding: $large-padding;
-    h2 {
-        position: relative;
-        text-decoration: none;
-        font-family: Parisian;
-    }
-    .img {
-        background-image: url("images/Logo/logo/emblem_logo_144.png");
-        position: fixed;
-    }
-    h2 {
-        font-family: Parisian;
-        font-weight: lighter;
-        font-size: large;
-        margin-top: 1.5rem;
-    }
-    ul {
-        @include hide-element;
-        @include desktop {
-            display: inline-flex;
-            @include bulletless-list;
-            li {
-                padding: 1rem;
-                a {
-                    color: $brand-color;
-                }
-            }
-        }
-    }
-}
-
-#menubutton {
-    @include bulletless-list;
-    @include no-underline-link;
-    @include center-text;
-    margin-top: 2rem;
-    color: black;
-    background-color: $menu-button-color;
-    border: 1px solid black;
-    border-radius: 0.2rem;
-    height: 80%;
-    padding: 0.1rem;
-    a:hover {
-        background: $link-hover-bg;
-    }
-}
-
 #navbar {
-    width: 65%;
     text-align: center;
     ul {
         li {
@@ -133,10 +81,7 @@ header {
         }
     }
     @include tablet {
-        margin-left: 5rem;
-        width: 70%;
+        width: 50%;
     }
-    @include desktop {
-        margin-left: 1rem;
-    }
+    @include desktop {}
 }

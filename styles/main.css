@@ -16,8 +16,72 @@
 
 body {
   font-size: calc(16px + (19 - 16) * ((100vw - 500px) / (1800 - 500)));
-  line-height: calc(1.3rem + (1.5 - 1.2) * ((100vw - 500px)/(1800 - 500)));
+  line-height: calc(1.2rem + (1.5 - 1.2) * ((100vw - 500px)/(1800 - 500)));
   font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+}
+
+header h2, header #homegridcontainer .main h3, #homegridcontainer .main header h3 {
+  position: relative;
+  text-decoration: none;
+  font-family: Parisian;
+}
+
+header .img {
+  background-image: url("images/Logo/logo/emblem_logo_144.png");
+  position: fixed;
+}
+
+header h2, header #homegridcontainer .main h3, #homegridcontainer .main header h3 {
+  font-family: Parisian;
+  font-weight: lighter;
+  font-size: large;
+  margin-top: 1.5rem;
+}
+
+header ul {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  header ul {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    list-style: none;
+  }
+  header ul li {
+    padding: 1rem;
+  }
+  header ul li a {
+    color: #236841;
+  }
+}
+
+#menubutton {
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 2rem;
+  color: black;
+  background-color: #6D7B42;
+  border: 1px solid black;
+  border-radius: 0.2rem;
+  height: 80%;
+  padding: 0.1rem;
+}
+
+#menubutton a:hover {
+  background: #CECACA;
 }
 
 footer {
@@ -31,14 +95,14 @@ footer a {
 
 footer li {
   list-style: none;
-  margin: 1rem;
+  margin: 0.5;
   text-align: center;
 }
 
 footer p {
   color: #FFFFFF;
   font-weight: lighter;
-  margin: 1rem;
+  margin: 0.5;
 }
 
 footer p span {
@@ -72,17 +136,17 @@ footer p span {
 }
 
 #homegridcontainer .main h1 {
-  margin: 1rem;
+  margin: 0.5;
   text-transform: uppercase;
 }
 
 #homegridcontainer .main h2, #homegridcontainer .main h3 {
-  margin: 1rem;
+  margin: 0.5;
   margin-top: 2rem;
 }
 
 #homegridcontainer .main P {
-  margin: 1rem;
+  margin: 0.5;
 }
 
 #homegridcontainer .main ul {
@@ -96,7 +160,7 @@ footer p span {
 #homegridcontainer video {
   max-width: 90%;
   height: auto;
-  margin-left: 1rem;
+  margin-left: 0.5;
 }
 
 #homegridcontainer header {
@@ -222,7 +286,7 @@ footer p span {
 }
 
 #booksgirdcontainer .pictures {
-  margin-top: 1rem;
+  margin-top: 0.5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,7 +341,7 @@ footer p span {
   background: #EEE;
   padding: 1rem;
   border: 2px solid #6E4D19;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5;
 }
 
 #contactgridcontainer form label {
@@ -318,7 +382,7 @@ footer p span {
 #contactgridcontainer select {
   width: 92%;
   padding: 0.5rem;
-  margin: 0.5rem 0;
+  margin: 0.25 0;
   margin-left: 0.5rem;
 }
 
@@ -466,7 +530,7 @@ footer p span {
     grid-gap: 1rem;
   }
   #contactgridcontainer .contactext p {
-    margin-top: 1rem;
+    margin-top: 0.5;
   }
   #contactgridcontainer form {
     max-width: 100%;
@@ -476,10 +540,6 @@ footer p span {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "contact interest" "contact extra1" "contact extra2" "submit submit";
   }
-}
-
-#booksgalerycontainer {
-  margin-left: small-margin;
 }
 
 #booksgalerycontainer header {
@@ -616,7 +676,7 @@ footer p span {
   border: 1px solid #000;
   width: 65%;
   text-align: center;
-  margin-left: 1rem;
+  margin-left: 0.5;
 }
 
 #deliverycontainer th,
@@ -627,7 +687,7 @@ footer p span {
 
 #deliverycontainer caption {
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25;
 }
 
 #deliverycontainer th {
@@ -647,8 +707,8 @@ footer p span {
 }
 
 #deliverycontainer main .deliveryinfo {
-  margin-top: 1rem;
-  margin-left: 1rem;
+  margin-top: 0.5;
+  margin-left: 0.5;
 }
 
 #deliverycontainer footer {
@@ -688,7 +748,7 @@ footer p span {
         grid-template-areas: "header header header" "navbar main main" "footer footer footer";
   }
   #deliverycontainer td {
-    padding: 1rem 1rem;
+    padding: 0.5 1rem;
   }
   #deliverycontainer caption {
     font-size: 1.1rem;
@@ -707,7 +767,8 @@ body {
 }
 
 #pagecontainer {
-  margin: 0 auto;
+  width: 95%;
+  margin: auto;
 }
 
 h1 {
@@ -717,7 +778,6 @@ h1 {
 
 h2, #homegridcontainer .main h3 {
   font-family: Parisian;
-  font-weight: lighter;
   text-decoration: underline;
   -webkit-text-decoration-color: #236841;
           text-decoration-color: #236841;
@@ -728,72 +788,7 @@ a {
   text-decoration: none;
 }
 
-header {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 1rem;
-}
-
-header h2, header #homegridcontainer .main h3, #homegridcontainer .main header h3 {
-  position: relative;
-  text-decoration: none;
-  font-family: Parisian;
-}
-
-header .img {
-  background-image: url("images/Logo/logo/emblem_logo_144.png");
-  position: fixed;
-}
-
-header h2, header #homegridcontainer .main h3, #homegridcontainer .main header h3 {
-  font-family: Parisian;
-  font-weight: lighter;
-  font-size: large;
-  margin-top: 1.5rem;
-}
-
-header ul {
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  header ul {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    list-style: none;
-  }
-  header ul li {
-    padding: 1rem;
-  }
-  header ul li a {
-    color: #236841;
-  }
-}
-
-#menubutton {
-  list-style: none;
-  text-decoration: none;
-  text-align: center;
-  margin-top: 2rem;
-  color: black;
-  background-color: #6D7B42;
-  border: 1px solid black;
-  border-radius: 0.2rem;
-  height: 80%;
-  padding: 0.1rem;
-}
-
-#menubutton a:hover {
-  background: #CECACA;
-}
-
 #navbar {
-  width: 65%;
   text-align: center;
 }
 
@@ -837,14 +832,7 @@ header ul {
 
 @media screen and (min-width: 601px) {
   #navbar {
-    margin-left: 5rem;
-    width: 70%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #navbar {
-    margin-left: 1rem;
+    width: 50%;
   }
 }
 /*# sourceMappingURL=main.css.map */
