@@ -623,6 +623,7 @@ footer p span {
 
 #booksgalerycontainer p {
   margin-top: 1rem;
+  width: 80%;
 }
 
 #booksgalerycontainer figure {
@@ -781,6 +782,10 @@ body {
   body .main-picture {
     display: none;
   }
+}
+
+main {
+  padding: 1rem;
 }
 
 h1 {
