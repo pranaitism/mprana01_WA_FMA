@@ -1,16 +1,16 @@
 //code used from in class recources
 @mixin left-label-legend {
     label {
-        margin-left: 0.5rem;
+        margin-left: $small-margin;
     }
     legend {
-        margin-left: 0.5rem;
+        margin-left: $small-margin;
     }
 }
 
 @mixin top-space-p {
     p {
-        margin-top: £small-marging;
+        margin-top: $small-margin;
     }
 }
 
@@ -25,9 +25,9 @@
     }
     .contactext {
         @include top-space-p;
-        margin-left: 3rem;
+        margin-left: $large-margin;
         p {
-            margin-top: 1rem;
+            margin-top: $medium-margin;
         }
     }
     label {
@@ -119,6 +119,7 @@
             grid-gap: $medium-gridgap;
         }
         form {
+            width: 70%;
             @include single-column-grid;
             grid-template-areas: "contact""interest""extra1""extra2""submit";
         }

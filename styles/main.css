@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -364,11 +363,11 @@ footer p span {
 }
 
 #contactgridcontainer .contactext {
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 
 #contactgridcontainer .contactext p {
-  margin-top: £small-marging;
+  margin-top: 0.5rem;
 }
 
 #contactgridcontainer .contactext p {
@@ -486,6 +485,7 @@ footer p span {
     grid-gap: 1rem;
   }
   #contactgridcontainer form {
+    width: 70%;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
@@ -716,7 +716,7 @@ footer p span {
 }
 
 #deliverycontainer .deliveryinfo span {
-  line-height: 2;
+  line-height: 1;
 }
 
 #deliverycontainer header {
