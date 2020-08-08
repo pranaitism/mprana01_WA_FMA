@@ -1,6 +1,7 @@
         #deliverycontainer {
             //code has been used from class material
             table {
+                display: table;
                 border-collapse: collapse;
                 border: 1px solid $border-cl;
                 width: 65%;
@@ -49,14 +50,14 @@
             }
             @include tablet {
                 @include two-column-grid;
-                grid-template-areas: "header header" "main main" "navbar navbar" "footer footer ";
+                grid-template-areas: "header header" "main main" "navbar navbar" "footer footer";
                 td {
-                    padding: $small-padding/2 $small-padding;
+                    //padding: $small-padding/2 $small-padding;
                 }
             }
             @include desktop {
                 @include three-column-grid;
-                grid-template-areas: "header header header" "navbar main." "footer footer footer";
+                grid-template-areas: "header header header" "navbar main main" "footer footer footer";
                 td {
                     padding: $medium-margin $large-padding;
                 }

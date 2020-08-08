@@ -706,6 +706,7 @@ footer p span {
 }
 
 #deliverycontainer table {
+  display: table;
   border-collapse: collapse;
   border: 1px solid #000;
   width: 65%;
@@ -738,7 +739,7 @@ footer p span {
 }
 
 #deliverycontainer .deliveryinfo span {
-  line-height: 1;
+  line-height: 2;
 }
 
 #deliverycontainer header {
@@ -774,10 +775,7 @@ footer p span {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "header header" "main main" "navbar navbar" "footer footer ";
-  }
-  #deliverycontainer td {
-    padding: 0.25rem 0.5rem;
+        grid-template-areas: "header header" "main main" "navbar navbar" "footer footer";
   }
 }
 
@@ -787,7 +785,7 @@ footer p span {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "header header header" "navbar main." "footer footer footer";
+        grid-template-areas: "header header header" "navbar main main" "footer footer footer";
   }
   #deliverycontainer td {
     padding: 1rem 1rem;
