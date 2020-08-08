@@ -49,11 +49,11 @@ a {
     ul {
         li {
             &:hover {
+                background: $link-hover-bg;
                 >ul {
                     visibility: visible;
                     opacity: 1;
                     display: block;
-                    background: $background-color;
                 }
             }
             margin: $small-margin;
@@ -61,16 +61,13 @@ a {
             background-color: $menu-button-color;
             border: groove;
             @include block-elem;
-            & :hover {
-                color: $footer-links-color;
-            }
             a {
                 color: black;
                 display: block;
             }
             ul {
                 display: none;
-                &:hover {
+                &:active {
                     visibility: visible;
                     opacity: 1;
                 }
@@ -81,10 +78,10 @@ a {
         }
     }
     @include tablet {
-        width: decimal-width(5);
+        width: decimal-width(4);
     }
     @include desktop {
-        width: decimal-width(4.5);
+        width: decimal-width(7);
         margin: 0;
     }
 }

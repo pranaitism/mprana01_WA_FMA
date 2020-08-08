@@ -57,6 +57,8 @@
             }
             .main-picture {
                 grid-area: main-picture;
+                position: relative;
+                vertical-align: middle;
             }
             #navbar {
                 grid-area: navbar;
@@ -66,6 +68,7 @@
             }
             .sidebar {
                 grid-area: sidebar;
+                width: decimal-width(7);
             }
             footer {
                 grid-area: footer;
@@ -76,12 +79,16 @@
             .selling {
                 grid-area: selling;
                 margin-top: $medium-margin;
+                margin-right: $large-margin;
+                width: decimal-width(8.5);
             }
             .buying {
                 grid-area: buying;
+                width: decimal-width(8.5);
             }
             .valuing {
                 grid-area: valuing;
+                width: decimal-width(8.5);
             }
             @include mobile {
                 @include single-column-grid;
@@ -119,6 +126,11 @@
                 main {
                     @include three-column-grid;
                     grid-template-areas: "media media selling" "buying valuing sidebar";
+                }
+                .sidebar-feature1 {
+                    p {
+                        width: decimal-width(5);
+                    }
                 }
             }
         }
