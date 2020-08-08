@@ -55,7 +55,7 @@ header ul {
     display: flex;
     position: absolute;
     top: 30px;
-    right: 50px;
+    right: 40px;
     list-style: none;
   }
   header ul li {
@@ -69,7 +69,7 @@ header ul {
 #menubutton {
   position: absolute;
   top: 30px;
-  right: 50px;
+  right: 40px;
   list-style: none;
   text-decoration: none;
   text-align: center;
@@ -210,7 +210,7 @@ footer p span {
 
 #homegridcontainer .selling {
   grid-area: selling;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-right: 2rem;
   width: 85%;
 }
@@ -738,7 +738,7 @@ footer p span {
 }
 
 #deliverycontainer .deliveryinfo span {
-  line-height: 2;
+  line-height: 1;
 }
 
 #deliverycontainer header {
