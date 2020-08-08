@@ -13,12 +13,6 @@
   src: local("../fonts/parisr.woff") format("woff");
 }
 
-body {
-  font-size: calc(16px + (19 - 16) * ((100vw - 500px) / (1800 - 500)));
-  line-height: calc(1.2rem + (1.5 - 1.2) * ((100vw - 500px)/(1800 - 500)));
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 header {
   display: inline;
   padding: 1rem;
@@ -115,13 +109,12 @@ footer p span {
 }
 
 @media screen and (min-width: 1024px) {
-  footer .top-links {
+  footer .footer-top-links {
     visibility: hidden;
     height: 0;
   }
   footer .bottom-links {
     margin-top: 1rem;
-    font-size: small;
   }
 }
 
@@ -700,7 +693,6 @@ footer p span {
 }
 
 #deliverycontainer table {
-  display: table;
   border-collapse: collapse;
   border: 1px solid #000;
   width: 65%;
@@ -733,7 +725,7 @@ footer p span {
 }
 
 #deliverycontainer .deliveryinfo span {
-  line-height: 2;
+  line-height: 1;
 }
 
 #deliverycontainer header {
@@ -744,7 +736,7 @@ footer p span {
   grid-area: navbar;
 }
 
-#deliverycontainer main {
+#deliverycontainer .main {
   grid-area: main;
 }
 
@@ -771,6 +763,9 @@ footer p span {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "header header" "main main" "navbar navbar" "footer footer";
   }
+  #deliverycontainer td {
+    padding: 0.5rem 0.5rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -781,15 +776,12 @@ footer p span {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "header header header" "navbar main main" "footer footer footer";
   }
-  #deliverycontainer td {
-    padding: 1rem 1rem;
-  }
-  #deliverycontainer caption {
-    font-size: 1.1rem;
-  }
 }
 
 body {
+  font-size: calc(16px + (19 - 16) * ((100vw - 500px) / (1800 - 500)));
+  line-height: calc(1.2rem + (1.5 - 1.2) * ((100vw - 500px)/(1800 - 500)));
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #E6DDCD;
   color: #040404;
 }

@@ -13,6 +13,9 @@
 @import 'scss/pages/delivery';
 //Styling for all pages
 body {
+    @include responsive-font;
+    @include responsive-line-height;
+    font-family: $base-font;
     background-color: $background-color;
     color: $font-color;
     @include mobile {

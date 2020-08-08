@@ -1,7 +1,6 @@
         #deliverycontainer {
-            //code has been used from class material
+            //code has been used from class session 6
             table {
-                display: table;
                 border-collapse: collapse;
                 border: 1px solid $border-cl;
                 width: 65%;
@@ -37,7 +36,7 @@
             #navbar {
                 grid-area: navbar;
             }
-            main {
+            .main {
                 grid-area: main;
             }
             footer {
@@ -52,17 +51,11 @@
                 @include two-column-grid;
                 grid-template-areas: "header header" "main main" "navbar navbar" "footer footer";
                 td {
-                    //padding: $small-padding/2 $small-padding;
+                    padding: $small-padding $small-padding;
                 }
             }
             @include desktop {
                 @include three-column-grid;
                 grid-template-areas: "header header header" "navbar main main" "footer footer footer";
-                td {
-                    padding: $medium-margin $large-padding;
-                }
-                caption {
-                    font-size: 1.1rem;
-                }
             }
         }

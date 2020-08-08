@@ -18,12 +18,11 @@ footer {
         }
     }
     @include desktop {
-        .top-links {
+        .footer-top-links {
             @include hide-links;
         }
         .bottom-links {
             margin-top: $medium-margin;
-            font-size: small;
         }
     }
 }

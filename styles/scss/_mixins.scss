@@ -2,11 +2,12 @@
     text-decoration: none;
 }
 
+//function to convert %in to decimals
 @mixin set-container-width ($number) {
     width: $number;
 }
 
-// link mixins
+//hide link mixins
 @mixin hide-links {
     visibility: hidden;
     height: 0;

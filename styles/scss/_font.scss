@@ -20,9 +20,3 @@ sans-serif;
     src: local('../fonts/parisr.ttf') format('tff');
     src: local('../fonts/parisr.woff') format('woff');
 }
-
-body {
-    @include responsive-font;
-    @include responsive-line-height;
-    font-family: $base-font;
-}
