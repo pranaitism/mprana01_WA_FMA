@@ -30,9 +30,18 @@ header h2, header #homegridcontainer .main h3, #homegridcontainer .main header h
   font-size: large;
 }
 
-header .img {
+header figure .logo {
   background-image: url("images/Logo/logo/emblem_logo_96.png");
-  position: fixed;
+  position: absolute;
+  top: 51px;
+  left: 20px;
+}
+
+header .logotext {
+  position: absolute;
+  top: 25px;
+  left: 115px;
+  white-space: nowrap;
 }
 
 header ul {
@@ -44,6 +53,9 @@ header ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: absolute;
+    top: 30px;
+    right: 50px;
     list-style: none;
   }
   header ul li {
@@ -55,7 +67,9 @@ header ul {
 }
 
 #menubutton {
-  display: inline;
+  position: absolute;
+  top: 30px;
+  right: 50px;
   list-style: none;
   text-decoration: none;
   text-align: center;

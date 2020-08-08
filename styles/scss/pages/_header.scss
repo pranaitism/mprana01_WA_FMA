@@ -1,3 +1,15 @@
+@mixin position-top-right {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+
+@mixin position-top-left {
+    position: absolute;
+    top: 51px;
+    left: 20px;
+}
+
 header {
     display: inline;
     padding: $large-padding;
@@ -6,14 +18,23 @@ header {
         font-weight: 300;
         font-size: large;
     }
-    .img {
-        background-image: url("images/Logo/logo/emblem_logo_96.png");
-        position: fixed;
+    figure {
+        .logo {
+            background-image: url("images/Logo/logo/emblem_logo_96.png");
+            @include position-top-left;
+        }
+    }
+    .logotext {
+        position: absolute;
+        top: 25px;
+        left: 115px;
+        white-space: nowrap;
     }
     ul {
         @include hide-element;
         @include desktop {
             display: flex;
+            @include position-top-right;
             @include bulletless-list;
             li {
                 padding: 1rem;
@@ -25,8 +46,18 @@ header {
     }
 }
 
+//not working-----------
+//.logodesktop {
+//background-image: url("images/Logo/logo/emblem_logo_128.png");
+//visibility: hidden;
+// height: 1;
+// @include desktop {
+//    visibility: visible;
+//    @include position-top-left;
+// }
+//}
 #menubutton {
-    display: inline;
+    @include position-top-right;
     @include bulletless-list;
     @include no-underline-link;
     @include center-text;
