@@ -287,6 +287,33 @@ footer p span {
   }
 }
 
+#booksgirdcontainer main section h2, #booksgirdcontainer main section #homegridcontainer .main h3, #homegridcontainer .main #booksgirdcontainer main section h3 {
+  margin-bottom: 1rem;
+}
+
+#booksgirdcontainer main p {
+  width: 85%;
+  margin-bottom: 1rem;
+}
+
+#booksgirdcontainer main a {
+  font-size: large;
+  color: #236841;
+}
+
+#booksgirdcontainer main a:hover {
+  font-weight: 600;
+}
+
+#booksgirdcontainer .pictures {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+#booksgirdcontainer .pictures img {
+  max-width: 50%;
+}
+
 #booksgirdcontainer header {
   grid-area: header;
 }
@@ -303,38 +330,7 @@ footer p span {
   grid-area: footer;
 }
 
-#booksgirdcontainer main p {
-  width: 85%;
-  margin: 0 auto;
-}
-
-#booksgirdcontainer main a {
-  color: #236841;
-}
-
-#booksgirdcontainer main a:hover {
-  font-weight: 600;
-}
-
-#booksgirdcontainer .pictures {
-  margin-top: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#booksgirdcontainer .pictures figure img {
-  max-width: 60%;
-}
-
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   #booksgirdcontainer {
     display: -ms-grid;
     display: grid;
@@ -352,18 +348,16 @@ footer p span {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "header header" "main main" "navbar navbar" "footer footer";
-    grid-gap: 1rem;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   #booksgirdcontainer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "header header header" "navbar main main" "footer footer footer";
-    grid-gap: 1rem;
   }
 }
 

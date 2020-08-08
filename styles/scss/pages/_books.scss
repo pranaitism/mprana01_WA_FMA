@@ -1,4 +1,30 @@
 #booksgirdcontainer {
+    //general stylin for page
+    main {
+        section {
+            h2 {
+                margin-bottom: $medium-margin;
+            }
+        }
+        p {
+            width: decimal-width(8.5);
+            margin-bottom: $medium-margin;
+        }
+        a {
+            font-size: large;
+            color: $brand-color;
+            &:hover {
+                font-weight: 600;
+            }
+        }
+    }
+    .pictures {
+        margin-top: $medium-margin +2rem;
+        text-align: center;
+        img {
+            max-width: decimal-width(5);
+        }
+    }
     //define grid areas
     header {
         grid-area: header;
@@ -12,43 +38,17 @@
     footer {
         grid-area: footer;
     }
-    //general stylin for page
-    main {
-        p {
-            width: 85%;
-            @include center-block;
-        }
-        a {
-            color: $brand-color;
-            &:hover {
-                font-weight: 600;
-            }
-        }
-    }
-    .pictures {
-        margin-top: $medium-margin;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        figure {
-            img {
-                max-width: 60%;
-            }
-        }
-    }
-    @media screen and(max-width: #{$phone-width}) {
+    @media (max-width: #{$phone-width}) {
         @include single-column-grid;
         grid-template-areas: "header" "main" "navbar" "footer";
-        grid-gap: 1rem;
+        grid-gap: $medium-gridgap;
     }
     @media (min-width: #{$tablet-width}) {
         @include two-column-grid;
         grid-template-areas: "header header" "main main" "navbar navbar" "footer footer";
-        grid-gap: 1rem;
     }
-    @media screen and (min-width: #{$desktop-width}) {
+    @media (min-width: #{$desktop-width}) {
         @include three-column-grid;
         grid-template-areas: "header header header" "navbar main main" "footer footer footer";
-        grid-gap: 1rem;
     }
 }
