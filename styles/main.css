@@ -126,11 +126,7 @@ footer p span {
 }
 
 #homegridcontainer .main-picture img {
-  mix-blend-mode: darken;
-}
-
-#homegridcontainer .main-picture img {
-  width: 80%;
+  width: 70%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -287,7 +283,7 @@ footer p span {
         grid-template-areas: "media media selling" "buying valuing sidebar";
   }
   #homegridcontainer .sidebar-feature1 p {
-    width: 50%;
+    width: 60%;
   }
 }
 
@@ -742,7 +738,7 @@ footer p span {
 }
 
 #deliverycontainer .deliveryinfo span {
-  line-height: 1;
+  line-height: 2;
 }
 
 #deliverycontainer header {
