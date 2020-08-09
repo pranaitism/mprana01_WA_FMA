@@ -39,31 +39,38 @@ header .logotext {
 }
 
 header ul {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  list-style: none;
 }
 
-@media (min-width: 1024px) {
+header ul li {
+  padding: 0.5rem;
+}
+
+header ul li a {
+  color: #236841;
+}
+
+@media (max-width: 600px) {
   header ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     position: absolute;
-    top: 30px;
-    right: 40px;
-    list-style: none;
+    bottom: 10px;
+    left: 115px;
   }
-  header ul li {
-    padding: 1rem;
-  }
-  header ul li a {
-    color: #236841;
+  header ul a {
+    color: white;
   }
 }
 
 #menubutton {
   position: absolute;
-  top: 30px;
-  right: 40px;
+  top: 75px;
+  right: 20px;
   list-style: none;
   text-decoration: none;
   text-align: center;
@@ -71,7 +78,7 @@ header ul {
   background-color: #6D7B42;
   border: 1px solid black;
   border-radius: 0.2rem;
-  padding: 0.1rem;
+  padding: 0.5rem;
 }
 
 #menubutton a:hover {
@@ -117,11 +124,37 @@ footer p span {
   }
 }
 
-#homegridcontainer .main-picture img {
-  width: 60%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+:focus {
+  outline: 2.5px dotted #481C34;
+}
+
+.skiplink {
+  position: absolute;
+  left: -10000px;
+}
+
+.skiplink:focus {
+  left: 10px;
+  top: 100px;
+  background-color: #B8B8A8;
+}
+
+#homegridcontainer .main-pictures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#homegridcontainer .main-pictures img {
+  mix-blend-mode: darken;
+}
+
+#homegridcontainer .main-pictures img {
+  max-width: 50%;
 }
 
 #homegridcontainer .sidebar figure {
@@ -133,8 +166,20 @@ footer p span {
 }
 
 #homegridcontainer .sidebar figure img {
-  max-width: 40%;
-  height: auto;
+  max-width: 60%;
+}
+
+#homegridcontainer .sidebar .sidebar-feature1 {
+  width: 80%;
+}
+
+#homegridcontainer .sidebar .sidebar-feature1 a {
+  font-size: large;
+  color: #236841;
+}
+
+#homegridcontainer .sidebar .sidebar-feature1 a:hover {
+  font-weight: 600;
 }
 
 #homegridcontainer .main h1 {
@@ -161,60 +206,44 @@ footer p span {
   width: 90%;
 }
 
-#homegridcontainer video {
-  max-width: 90%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 #homegridcontainer header {
   grid-area: header;
 }
 
-#homegridcontainer .main-picture {
+#homegridcontainer .main-pictures {
   grid-area: main-picture;
-  position: relative;
-  vertical-align: middle;
 }
 
 #homegridcontainer #navbar {
   grid-area: navbar;
 }
 
-#homegridcontainer main {
+#homegridcontainer .main {
   grid-area: main;
 }
 
 #homegridcontainer .sidebar {
   grid-area: sidebar;
-  width: 70%;
 }
 
 #homegridcontainer footer {
   grid-area: footer;
 }
 
-#homegridcontainer .media {
-  grid-area: media;
+#homegridcontainer #intro {
+  grid-area: intro;
 }
 
 #homegridcontainer .selling {
-  grid-area: selling;
-  margin-top: 0.5rem;
-  margin-right: 2rem;
-  width: 85%;
+  width: 50%;
 }
 
 #homegridcontainer .buying {
   grid-area: buying;
-  width: 85%;
 }
 
 #homegridcontainer .valuing {
   grid-area: valuing;
-  width: 85%;
 }
 
 @media (max-width: 600px) {
@@ -231,7 +260,7 @@ footer p span {
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: "media" "selling" "buying" "valuing" "sidebar";
+        grid-template-areas: "intro" "buying" "valuing" "sidebar";
   }
 }
 
@@ -249,13 +278,10 @@ footer p span {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "media selling" "buying valuing" "sidebar sidebar";
+        grid-template-areas: "intro intro" "buying sidebar" "valuing.";
   }
   #homegridcontainer .sidebar figure img {
-    max-width: 20%;
-  }
-  #homegridcontainer .sidebar-feature1 p {
-    width: 40%;
+    max-width: 30%;
   }
 }
 
@@ -272,10 +298,22 @@ footer p span {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "media media selling" "buying valuing sidebar";
+        grid-template-areas: "intro intro sidebar" "buying valuing.";
   }
-  #homegridcontainer .sidebar-feature1 p {
-    width: 60%;
+  #homegridcontainer #intro {
+    margin-left: 0;
+    margin-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #homegridcontainer .media {
+    width: 50%;
+  }
+  #homegridcontainer .selling {
+    width: 50%;
   }
 }
 
@@ -700,7 +738,7 @@ footer p span {
   border: 1px solid #000;
   text-align: center;
   margin-left: 1rem;
-  width: 80%;
+  width: 90%;
 }
 
 #deliverycontainer th,
@@ -729,7 +767,7 @@ footer p span {
 }
 
 #deliverycontainer .deliveryinfo span {
-  line-height: 1;
+  line-height: 2;
 }
 
 #deliverycontainer header {
@@ -740,8 +778,9 @@ footer p span {
   grid-area: navbar;
 }
 
-#deliverycontainer main {
-  grid-area: main;
+#deliverycontainer #delivery-content {
+  grid-area: delivery-content;
+  margin-bottom: 10rem;
 }
 
 #deliverycontainer footer {
@@ -754,7 +793,7 @@ footer p span {
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: "header" "main" "navbar" "footer";
+        grid-template-areas: "header" "delivery-content" "navbar" "footer";
     grid-gap: 1rem;
   }
 }
@@ -765,7 +804,8 @@ footer p span {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "header header" "main main" "navbar navbar" "footer footer";
+        grid-template-areas: "header header" "delivery-content delivery-content" "navbar navbar" "footer footer";
+    grid-gap: 1rem;
   }
   #deliverycontainer td {
     padding: 0.5rem 0.5rem;
@@ -778,7 +818,9 @@ footer p span {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "header header header" "navbar. ." ".main main" "footer footer footer";
+        grid-template-areas: "header header header" "navbar delivery-content delivery-content" "footer footer footer";
+    grid-gap: 1rem;
+    max-width: 100%;
   }
 }
 

@@ -1,7 +1,7 @@
 @mixin position-top-right {
     position: absolute;
-    top: 30px;
-    right: 40px;
+    top: 0px;
+    right: 20px;
 }
 
 @mixin position-top-left {
@@ -31,16 +31,21 @@ header {
         white-space: nowrap;
     }
     ul {
-        @include hide-element;
-        @include desktop {
-            display: flex;
-            @include position-top-right;
-            @include bulletless-list;
-            li {
-                padding: 1rem;
-                a {
-                    color: $brand-color;
-                }
+        display: flex;
+        @include position-top-right;
+        @include bulletless-list;
+        li {
+            padding: $small-padding;
+            a {
+                color: $brand-color;
+            }
+        }
+        @include mobile {
+            position: absolute;
+            bottom: 10px;
+            left: 115px;
+            a {
+                color: white;
             }
         }
     }
@@ -57,7 +62,9 @@ header {
 // }
 //}
 #menubutton {
-    @include position-top-right;
+    position: absolute;
+    top: 75px;
+    right: 20px;
     @include bulletless-list;
     @include no-underline-link;
     @include center-text;
@@ -65,7 +72,7 @@ header {
     background-color: $menu-button-color;
     border: 1px solid black;
     border-radius: 0.2rem;
-    padding: 0.1rem;
+    padding: 0.5rem;
     a:hover {
         background: $link-hover-bg;
     }

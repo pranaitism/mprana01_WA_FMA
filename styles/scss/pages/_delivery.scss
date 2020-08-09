@@ -6,7 +6,7 @@
         border: 1px solid $border-cl;
         text-align: center;
         margin-left: $medium-margin;
-        width: decimal-width(8);
+        width: decimal-width(9);
     }
     th,
     td {
@@ -38,26 +38,30 @@
     #navbar {
         grid-area: navbar;
     }
-    main {
-        grid-area: main;
+    #delivery-content {
+        grid-area: delivery-content;
+        margin-bottom: 10rem;
     }
     footer {
         grid-area: footer;
     }
     @include mobile {
         @include single-column-grid;
-        grid-template-areas: "header" "main" "navbar" "footer";
+        grid-template-areas: "header" "delivery-content" "navbar" "footer";
         grid-gap: $medium-gridgap;
     }
     @include tablet {
         @include two-column-grid;
-        grid-template-areas: "header header" "main main" "navbar navbar" "footer footer";
+        grid-template-areas: "header header" "delivery-content delivery-content" "navbar navbar" "footer footer";
+        grid-gap: $medium-gridgap;
         td {
             padding: $small-padding $small-padding;
         }
     }
     @include desktop {
         @include three-column-grid;
-        grid-template-areas: "header header header" "navbar. ." ".main main""footer footer footer";
+        grid-template-areas: "header header header" "navbar delivery-content delivery-content""footer footer footer";
+        grid-gap: $medium-gridgap;
+        max-width: 100%;
     }
 }

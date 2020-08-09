@@ -1,135 +1,140 @@
-        #homegridcontainer {
-            .main-picture {
+:focus {
+    outline: 2.5px dotted #481C34;
+}
+
+.skiplink {
+    position: absolute;
+    left: -10000px;
+}
+
+.skiplink:focus {
+    left: 10px;
+    top: 100px;
+    background-color: #B8B8A8;
+}
+
+#homegridcontainer {
+    .main-pictures {
+        display: flex;
+        flex-direction: row;
+        @include img-darken;
+        img {
+            max-width: decimal-width(5);
+        }
+    }
+    .sidebar {
+        figure {
+            margin-left: $medium-margin;
+            @include img-darken;
+            img {
+                max-width: decimal-width(6);
+            }
+        }
+        .sidebar-feature1 {
+            @include link-hover;
+            width: decimal-width(8);
+        }
+    }
+    //main styling
+    .main {
+        h1 {
+            margin-left: $large-margin;
+            text-transform: uppercase;
+            margin-bottom: $large-margin;
+            font-weight: 600;
+        }
+        h2 {
+            margin: $medium-margin;
+            margin-top: $large-margin +1;
+        }
+        h3 {
+            @extend h2;
+        }
+        P {
+            margin: $medium-margin;
+        }
+        ul {
+            margin-left: $large-margin;
+            li {
+                width: decimal-width(9);
+            }
+        }
+    }
+    //// responsive video 
+    // define grid areas
+    header {
+        grid-area: header;
+    }
+    .main-pictures {
+        grid-area: main-picture;
+    }
+    #navbar {
+        grid-area: navbar;
+    }
+    .main {
+        grid-area: main;
+    }
+    .sidebar {
+        grid-area: sidebar;
+    }
+    footer {
+        grid-area: footer;
+    }
+    #intro {
+        grid-area: intro;
+    }
+    .selling {
+        width: decimal-width(5);
+    }
+    .buying {
+        grid-area: buying;
+    }
+    .valuing {
+        grid-area: valuing;
+    }
+    @include mobile {
+        @include single-column-grid;
+        grid-template-areas: "header" "main-picture" "main" "navbar" "footer";
+        grid-gap: $medium-gridgap;
+        main {
+            @include single-column-grid;
+            grid-template-areas: "intro" "buying" "valuing""sidebar";
+        }
+    }
+    @include tablet {
+        @include two-column-grid;
+        grid-template-areas: "header header" "main-picture main-picture" "main main" "navbar navbar" "footer footer";
+        grid-gap: $medium-gridgap;
+        main {
+            @include two-column-grid;
+            grid-template-areas: "intro intro" "buying sidebar" "valuing.";
+        }
+        .sidebar {
+            figure {
                 img {
-                    width: decimal-width(6);
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-            }
-            .sidebar {
-                figure {
-                    margin-left: $medium-margin;
-                    @include img-darken;
-                    img {
-                        max-width: decimal-width(4);
-                        height: auto;
-                    }
-                }
-            }
-            //main styling
-            .main {
-                h1 {
-                    margin-left: $large-margin;
-                    text-transform: uppercase;
-                    margin-bottom: $large-margin;
-                    font-weight: 600;
-                }
-                h2 {
-                    margin: $medium-margin;
-                    margin-top: $large-margin +1;
-                }
-                h3 {
-                    @extend h2;
-                }
-                P {
-                    margin: $medium-margin;
-                }
-                ul {
-                    margin-left: $large-margin;
-                    li {
-                        width: decimal-width(9);
-                    }
-                }
-            }
-            //// responsive video 
-            video {
-                max-width: decimal-width(9);
-                height: auto;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            // define grid areas
-            header {
-                grid-area: header;
-            }
-            .main-picture {
-                grid-area: main-picture;
-                position: relative;
-                vertical-align: middle;
-            }
-            #navbar {
-                grid-area: navbar;
-            }
-            main {
-                grid-area: main;
-            }
-            .sidebar {
-                grid-area: sidebar;
-                width: decimal-width(7);
-            }
-            footer {
-                grid-area: footer;
-            }
-            .media {
-                grid-area: media;
-            }
-            .selling {
-                grid-area: selling;
-                margin-top: $small-margin;
-                margin-right: $large-margin;
-                width: decimal-width(8.5);
-            }
-            .buying {
-                grid-area: buying;
-                width: decimal-width(8.5);
-            }
-            .valuing {
-                grid-area: valuing;
-                width: decimal-width(8.5);
-            }
-            @include mobile {
-                @include single-column-grid;
-                grid-template-areas: "header" "main-picture" "main" "navbar" "footer";
-                grid-gap: $medium-gridgap;
-                main {
-                    @include single-column-grid;
-                    grid-template-areas: "media" "selling" "buying" "valuing""sidebar";
-                }
-            }
-            @include tablet {
-                @include two-column-grid;
-                grid-template-areas: "header header" "main-picture main-picture" "main main" "navbar navbar" "footer footer";
-                grid-gap: $medium-gridgap;
-                main {
-                    @include two-column-grid;
-                    grid-template-areas: "media selling" "buying valuing" "sidebar sidebar";
-                }
-                .sidebar {
-                    figure {
-                        img {
-                            max-width: decimal-width(2);
-                        }
-                    }
-                }
-                .sidebar-feature1 {
-                    p {
-                        width: decimal-width(4);
-                    }
-                }
-            }
-            @include desktop {
-                @include three-column-grid;
-                grid-template-areas: "header header header" "navbar main-picture main-picture" "main main main" "footer footer footer";
-                main {
-                    @include three-column-grid;
-                    grid-template-areas: "media media selling" "buying valuing sidebar";
-                }
-                .sidebar-feature1 {
-                    p {
-                        width: decimal-width(6);
-                    }
+                    max-width: decimal-width(3);
                 }
             }
         }
+    }
+    @include desktop {
+        @include three-column-grid;
+        grid-template-areas: "header header header" "navbar main-picture main-picture" "main main main" "footer footer footer";
+        main {
+            @include three-column-grid;
+            grid-template-areas: "intro intro sidebar" "buying valuing.";
+        }
+        #intro {
+            margin-left: 0;
+            margin-right: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .media {
+            width: decimal-width(5);
+        }
+        .selling {
+            width: 50%;
+        }
+    }
+}
