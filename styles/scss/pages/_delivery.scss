@@ -1,61 +1,63 @@
-        #deliverycontainer {
-            //code has been used from class session 6
-            table {
-                border-collapse: collapse;
-                border: 1px solid $border-cl;
-                width: 65%;
-                text-align: center;
-                margin-left: $medium-margin;
-            }
-            th,
-            td {
-                border: 1px solid $border-cl;
-                padding: 0.1rem;
-            }
-            caption {
-                font-size: 1.2rem;
-                margin-bottom: $medium-margin;
-            }
-            th {
-                background-color: $table-bg;
-            }
-            tr:first-child {
-                background-color: $table-bg;
-            }
-            .deliveryinfo {
-                margin-top: $medium-margin;
-                margin-left: $medium-margin;
-                span {
-                    line-height: random($limit: 2);
-                }
-            }
-            //grid areas
-            header {
-                grid-area: header;
-            }
-            #navbar {
-                grid-area: navbar;
-            }
-            .main {
-                grid-area: main;
-            }
-            footer {
-                grid-area: footer;
-            }
-            @include mobile {
-                @include single-column-grid;
-                grid-template-areas: "header" "main" "navbar" "footer";
-                grid-gap: $medium-gridgap;
-            }
-            @include tablet {
-                @include two-column-grid;
-                grid-template-areas: "header header" "main main" "navbar navbar" "footer footer";
-                td {
-                    padding: $small-padding $small-padding;
-                }
-            }
-            @include desktop {
-                @include three-column-grid;
-                grid-template-areas: "header header header" "navbar main main" "footer footer footer";
-            }
+#deliverycontainer {
+    //code has been used from class session 6
+    table {
+        display: table;
+        border-collapse: collapse;
+        border: 1px solid $border-cl;
+        text-align: center;
+        margin-left: $medium-margin;
+        width: decimal-width(8);
+    }
+    th,
+    td {
+        border: 1px solid $border-cl;
+        padding: 0.1rem;
+    }
+    caption {
+        font-size: 1.2rem;
+        margin-bottom: $medium-margin;
+    }
+    th {
+        background-color: $table-bg;
+    }
+    tr:first-child {
+        background-color: $table-bg;
+    }
+    .deliveryinfo {
+        margin-top: $medium-margin;
+        margin-left: $medium-margin;
+        margin-bottom: $medium-margin;
+        span {
+            line-height: random($limit: 2);
         }
+    }
+    //grid areas
+    header {
+        grid-area: header;
+    }
+    #navbar {
+        grid-area: navbar;
+    }
+    main {
+        grid-area: main;
+    }
+    footer {
+        grid-area: footer;
+    }
+    @include mobile {
+        @include single-column-grid;
+        grid-template-areas: "header" "main" "navbar" "footer";
+        grid-gap: $medium-gridgap;
+    }
+    @include tablet {
+        @include two-column-grid;
+        grid-template-areas: "header header" "main main" "navbar navbar" "footer footer";
+        td {
+            padding: $small-padding $small-padding;
+        }
+    }
+    @include desktop {
+        @include three-column-grid;
+        grid-template-areas: "header header header" "navbar. ." ".main main""footer footer footer";
+    }
+}

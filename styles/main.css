@@ -42,7 +42,7 @@ header ul {
   display: none;
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   header ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -78,7 +78,7 @@ header ul {
   background: #CECACA;
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   #menubutton {
     display: none;
   }
@@ -108,7 +108,7 @@ footer p span {
   font-size: large;
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   footer .footer-top-links {
     display: none;
   }
@@ -217,7 +217,7 @@ footer p span {
   width: 85%;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   #homegridcontainer {
     display: -ms-grid;
     display: grid;
@@ -235,7 +235,7 @@ footer p span {
   }
 }
 
-@media screen and (min-width: 601px) {
+@media (min-width: 601px) {
   #homegridcontainer {
     display: -ms-grid;
     display: grid;
@@ -259,7 +259,7 @@ footer p span {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   #homegridcontainer {
     display: -ms-grid;
     display: grid;
@@ -481,7 +481,7 @@ footer p span {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   #contactgridcontainer {
     display: -ms-grid;
     display: grid;
@@ -507,7 +507,7 @@ footer p span {
   }
 }
 
-@media screen and (min-width: 601px) {
+@media (min-width: 601px) {
   #contactgridcontainer {
     display: -ms-grid;
     display: grid;
@@ -536,7 +536,7 @@ footer p span {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   #contactgridcontainer {
     display: -ms-grid;
     display: grid;
@@ -639,7 +639,7 @@ footer p span {
   mix-blend-mode: darken;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   #booksgalerycontainer {
     display: -ms-grid;
     display: grid;
@@ -659,7 +659,7 @@ footer p span {
   grid-gap: 1rem;
 }
 
-@media screen and (min-width: 601px) {
+@media (min-width: 601px) {
   #booksgalerycontainer {
     display: -ms-grid;
     display: grid;
@@ -677,7 +677,7 @@ footer p span {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   #booksgalerycontainer {
     display: -ms-grid;
     display: grid;
@@ -695,11 +695,12 @@ footer p span {
 }
 
 #deliverycontainer table {
+  display: table;
   border-collapse: collapse;
   border: 1px solid #000;
-  width: 65%;
   text-align: center;
   margin-left: 1rem;
+  width: 80%;
 }
 
 #deliverycontainer th,
@@ -724,10 +725,11 @@ footer p span {
 #deliverycontainer .deliveryinfo {
   margin-top: 1rem;
   margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 #deliverycontainer .deliveryinfo span {
-  line-height: 1;
+  line-height: 2;
 }
 
 #deliverycontainer header {
@@ -738,7 +740,7 @@ footer p span {
   grid-area: navbar;
 }
 
-#deliverycontainer .main {
+#deliverycontainer main {
   grid-area: main;
 }
 
@@ -746,7 +748,7 @@ footer p span {
   grid-area: footer;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   #deliverycontainer {
     display: -ms-grid;
     display: grid;
@@ -757,7 +759,7 @@ footer p span {
   }
 }
 
-@media screen and (min-width: 601px) {
+@media (min-width: 601px) {
   #deliverycontainer {
     display: -ms-grid;
     display: grid;
@@ -770,13 +772,13 @@ footer p span {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   #deliverycontainer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "header header header" "navbar main main" "footer footer footer";
+        grid-template-areas: "header header header" "navbar. ." ".main main" "footer footer footer";
   }
 }
 
@@ -788,7 +790,7 @@ body {
   color: #040404;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   body .main-picture {
     display: none;
   }
@@ -857,13 +859,13 @@ a {
   width: 90%;
 }
 
-@media screen and (min-width: 601px) {
+@media (min-width: 601px) {
   #navbar {
     width: 40%;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   #navbar {
     width: 70%;
     margin: 0;
