@@ -824,10 +824,9 @@ a {
 }
 
 #navbar ul li {
-  margin: 0.5rem;
+  margin: 0.1rem;
   padding: 0.5rem;
   background-color: #6D7B42;
-  border: groove;
   display: block;
 }
 

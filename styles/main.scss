@@ -59,10 +59,9 @@ a {
                     display: block;
                 }
             }
-            margin: $small-margin;
+            margin: 0.1rem;
             padding: $small-padding;
             background-color: $menu-button-color;
-            border: groove;
             @include block-elem;
             a {
                 color: black;
