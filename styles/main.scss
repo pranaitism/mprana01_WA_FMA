@@ -59,13 +59,16 @@ a {
                     display: block;
                 }
             }
-            margin: 0.1rem;
+            margin: 0.2rem;
             padding: $small-padding;
             background-color: $menu-button-color;
             @include block-elem;
             a {
                 color: black;
                 display: block;
+                &:hover {
+                    font-weight: 600;
+                }
             }
             ul {
                 display: none;
@@ -74,7 +77,9 @@ a {
                     opacity: 1;
                 }
                 li {
-                    width: decimal-width(9);
+                    a:hover {
+                        font-weight: 600;
+                    }
                 }
             }
         }

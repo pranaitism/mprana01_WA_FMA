@@ -729,7 +729,7 @@ footer p span {
 }
 
 #deliverycontainer .deliveryinfo span {
-  line-height: 2;
+  line-height: 1;
 }
 
 #deliverycontainer header {
@@ -824,7 +824,7 @@ a {
 }
 
 #navbar ul li {
-  margin: 0.1rem;
+  margin: 0.2rem;
   padding: 0.5rem;
   background-color: #6D7B42;
   display: block;
@@ -845,6 +845,10 @@ a {
   display: block;
 }
 
+#navbar ul li a:hover {
+  font-weight: 600;
+}
+
 #navbar ul li ul {
   display: none;
 }
@@ -854,8 +858,8 @@ a {
   opacity: 1;
 }
 
-#navbar ul li ul li {
-  width: 90%;
+#navbar ul li ul li a:hover {
+  font-weight: 600;
 }
 
 @media (min-width: 601px) {
