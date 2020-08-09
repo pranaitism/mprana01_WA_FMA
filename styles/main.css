@@ -110,8 +110,7 @@ footer p span {
 
 @media screen and (min-width: 1024px) {
   footer .footer-top-links {
-    visibility: hidden;
-    height: 0;
+    display: none;
   }
   footer .bottom-links {
     margin-top: 1rem;
@@ -355,11 +354,11 @@ footer p span {
 }
 
 #contactgridcontainer form {
-  margin: 0 auto;
   background: #EEE;
   padding: 1rem;
   border: 2px solid #6E4D19;
   margin-bottom: 1rem;
+  width: 75%;
 }
 
 #contactgridcontainer form label {
@@ -368,17 +367,10 @@ footer p span {
 
 #contactgridcontainer form legend {
   margin-left: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-#contactgridcontainer .contactext {
-  margin-left: 2rem;
-}
-
-#contactgridcontainer .contactext p {
-  margin-top: 0.5rem;
-}
-
-#contactgridcontainer .contactext p {
+#contactgridcontainer p {
   margin-top: 1rem;
 }
 
@@ -394,6 +386,10 @@ footer p span {
 #contactgridcontainer button {
   background: #236841;
   padding: 1rem;
+}
+
+#contactgridcontainer button:focus {
+  background-color: grey;
 }
 
 #contactgridcontainer input,
@@ -416,20 +412,50 @@ footer p span {
   border: 1px solid #6E4D19;
 }
 
-#contactgridcontainer form p {
+#contactgridcontainer .contacttext a {
+  font-size: large;
+  color: #236841;
+}
+
+#contactgridcontainer .contacttext a:hover {
+  font-weight: 600;
+}
+
+#contactgridcontainer .required {
   color: #F00;
 }
 
 #contactgridcontainer input:invalid:focus {
-  outline: 2px solid #F00;
+  outline: 3px solid #F00;
 }
 
 #contactgridcontainer input:valid:focus:not([type=radio]):not([type=checkbox]) {
-  outline: 2px solid #236841;
+  outline: 3px solid #236841;
 }
 
-#contactgridcontainer .contactext {
-  grid-area: contactext;
+#contactgridcontainer header {
+  grid-area: header;
+}
+
+#contactgridcontainer #navbar {
+  grid-area: navbar;
+}
+
+#contactgridcontainer footer {
+  grid-area: footer;
+}
+
+#contactgridcontainer main {
+  grid-area: main;
+}
+
+#contactgridcontainer .contacttext {
+  grid-area: contacttext;
+  width: 80%;
+}
+
+#contactgridcontainer form {
+  grid-area: form;
 }
 
 #contactgridcontainer #contact {
@@ -455,26 +481,6 @@ footer p span {
   text-transform: uppercase;
 }
 
-#contactgridcontainer header {
-  grid-area: header;
-}
-
-#contactgridcontainer #navbar {
-  grid-area: navbar;
-}
-
-#contactgridcontainer form {
-  grid-area: form;
-}
-
-#contactgridcontainer footer {
-  grid-area: footer;
-}
-
-#contactgridcontainer main {
-  grid-area: main;
-}
-
 @media screen and (max-width: 600px) {
   #contactgridcontainer {
     display: -ms-grid;
@@ -489,12 +495,10 @@ footer p span {
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: "contactext" "form";
+        grid-template-areas: "contacttext" "form";
     grid-gap: 1rem;
   }
   #contactgridcontainer form {
-    width: 75%;
-    min-width: 50%;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
@@ -517,11 +521,11 @@ footer p span {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "contactext contactext" "form form";
+        grid-template-areas: "contacttext contacttext" "form form";
     grid-gap: 1rem;
   }
   #contactgridcontainer form {
-    width: 60%;
+    width: 65%;
     margin: 0 auto;
     display: -ms-grid;
     display: grid;
@@ -539,26 +543,24 @@ footer p span {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: "header header header" "navbar main main" "footer footer footer";
-    grid-gap: 1rem;
   }
   #contactgridcontainer main {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "contactext contactext" "form form";
-    grid-gap: 1rem;
-  }
-  #contactgridcontainer .contactext p {
-    margin-top: 1rem;
+        grid-template-areas: "contacttext contacttext contacttext" "form form form";
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #contactgridcontainer form {
-    max-width: 100%;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "contact interest" "contact extra1" "contact extra2" "submit submit";
+    grid-gap: 1rem;
   }
 }
 

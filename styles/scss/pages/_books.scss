@@ -10,13 +10,7 @@
             width: decimal-width(8.5);
             margin-bottom: $medium-margin;
         }
-        a {
-            font-size: large;
-            color: $brand-color;
-            &:hover {
-                font-weight: 600;
-            }
-        }
+        @include link-hover;
     }
     .pictures {
         margin-top: $medium-margin +2rem;

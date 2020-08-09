@@ -19,7 +19,7 @@ footer {
     }
     @include desktop {
         .footer-top-links {
-            @include hide-links;
+            display: none;
         }
         .bottom-links {
             margin-top: $medium-margin;
