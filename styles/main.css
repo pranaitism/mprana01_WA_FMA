@@ -14,11 +14,13 @@
 }
 
 header {
-  display: inline;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   padding: 1rem;
 }
 
-header h2, header #homegridcontainer .main h3, #homegridcontainer .main header h3 {
+header h2, header #homegridcontainer .main h1, #homegridcontainer .main header h1, header #homegridcontainer .main h3, #homegridcontainer .main header h3 {
   font-family: Parisian;
   font-weight: 300;
   font-size: large;
@@ -139,30 +141,20 @@ footer p span {
   background-color: #B8B8A8;
 }
 
+h2, #homegridcontainer .main h1, #homegridcontainer .main h3 {
+  font-family: Parisian;
+}
+
 #homegridcontainer .main-pictures {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  text-align: center;
 }
 
 #homegridcontainer .main-pictures img {
   mix-blend-mode: darken;
-}
-
-#homegridcontainer .main-pictures img {
-  max-width: 50%;
 }
 
 #homegridcontainer .sidebar figure {
   margin-left: 1rem;
-}
-
-#homegridcontainer .sidebar figure img {
-  mix-blend-mode: darken;
 }
 
 #homegridcontainer .sidebar figure img {
@@ -183,15 +175,20 @@ footer p span {
 }
 
 #homegridcontainer .main h1 {
-  margin-left: 2rem;
+  text-align: center;
   text-transform: uppercase;
   margin-bottom: 2rem;
   font-weight: 600;
 }
 
-#homegridcontainer .main h2, #homegridcontainer .main h3 {
+#homegridcontainer .main h2, #homegridcontainer .main h1, #homegridcontainer .main h3 {
   margin: 1rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
+  font-family: 'Parisian';
+}
+
+#homegridcontainer .main h3 {
+  font-family: Parisian;
 }
 
 #homegridcontainer .main P {
@@ -211,7 +208,7 @@ footer p span {
 }
 
 #homegridcontainer .main-pictures {
-  grid-area: main-picture;
+  grid-area: main-pictures;
 }
 
 #homegridcontainer #navbar {
@@ -234,8 +231,16 @@ footer p span {
   grid-area: intro;
 }
 
+#homegridcontainer .welcome {
+  grid-area: welcome;
+}
+
+#homegridcontainer .media {
+  grid-area: media;
+}
+
 #homegridcontainer .selling {
-  width: 50%;
+  grid-area: selling;
 }
 
 #homegridcontainer .buying {
@@ -252,15 +257,14 @@ footer p span {
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: "header" "main-picture" "main" "navbar" "footer";
+        grid-template-areas: "header" "main-pictures" "main" "navbar" "footer";
     grid-gap: 1rem;
   }
-  #homegridcontainer main {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        grid-template-areas: "intro" "buying" "valuing" "sidebar";
+  #homegridcontainer video {
+    max-width: 90%;
+  }
+  #homegridcontainer .main-pictures img {
+    mix-blend-mode: darken;
   }
 }
 
@@ -270,7 +274,7 @@ footer p span {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "header header" "main-picture main-picture" "main main" "navbar navbar" "footer footer";
+        grid-template-areas: "header header" "main-pictures main-picture" "main main" "navbar navbar" "footer footer";
     grid-gap: 1rem;
   }
   #homegridcontainer main {
@@ -280,8 +284,25 @@ footer p span {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "intro intro" "buying sidebar" "valuing.";
   }
+  #homegridcontainer #intro {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "media selling";
+    grid-gap: 1rem;
+  }
+  #homegridcontainer video {
+    max-width: 90%;
+  }
+  #homegridcontainer .sidebar {
+    text-align: center;
+  }
   #homegridcontainer .sidebar figure img {
     max-width: 30%;
+  }
+  #homegridcontainer .sidebar .sidebar-feature1 {
+    margin-left: 2rem;
   }
 }
 
@@ -291,33 +312,25 @@ footer p span {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "header header header" "navbar main-picture main-picture" "main main main" "footer footer footer";
+        grid-template-areas: "header header header" "navbar main-pictures." "main main main" "footer footer footer";
   }
   #homegridcontainer main {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "intro intro sidebar" "buying valuing.";
+        grid-template-areas: "intro intro intro" "buying valuing sidebar";
   }
-  #homegridcontainer #intro {
-    margin-left: 0;
-    margin-right: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  #homegridcontainer .media {
-    width: 50%;
+  #homegridcontainer video {
+    max-width: 90%;
   }
   #homegridcontainer .selling {
-    width: 50%;
+    margin-top: 2rem;
+    width: 80%;
   }
 }
 
-#booksgirdcontainer main section h2, #booksgirdcontainer main section #homegridcontainer .main h3, #homegridcontainer .main #booksgirdcontainer main section h3 {
+#booksgirdcontainer main section h2, #booksgirdcontainer main section #homegridcontainer .main h1, #homegridcontainer .main #booksgirdcontainer main section h1, #booksgirdcontainer main section #homegridcontainer .main h3, #homegridcontainer .main #booksgirdcontainer main section h3 {
   margin-bottom: 1rem;
 }
 
@@ -847,7 +860,7 @@ h1 {
   font-family: Parisian;
 }
 
-h2, #homegridcontainer .main h3 {
+h2, #homegridcontainer .main h1, #homegridcontainer .main h3 {
   font-family: Parisian;
   text-decoration: underline;
   -webkit-text-decoration-color: #236841;

@@ -7,17 +7,13 @@
     width: $number;
 }
 
-//hide link mixins
-@mixin hide-links {
-    visibility: hidden;
-    height: 0;
-}
 
 // link hover 
 @mixin link-hover {
     a {
         font-size: large;
         color: $brand-color;
+
         &:hover {
             font-weight: 600;
         }
