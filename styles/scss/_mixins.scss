@@ -2,18 +2,24 @@
     text-decoration: none;
 }
 
-//function to convert %in to decimals
+//mixin to convert %in to decimals
 @mixin set-container-width ($number) {
     width: $number;
 }
 
+//positioning top right
+@mixin position-top-right($top, $right, $height) {
+    position: absolute;
+    top: $top + 0px;
+    right: $right + 0px;
+    height: height + 0px;
+}
 
 // link hover 
 @mixin link-hover {
     a {
         font-size: large;
         color: $brand-color;
-
         &:hover {
             font-weight: 600;
         }

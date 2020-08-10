@@ -14,10 +14,7 @@
 }
 
 header {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  padding: 1rem;
+  margin-top: 2rem;
 }
 
 header h2, header #homegridcontainer .main h1, #homegridcontainer .main header h1, header #homegridcontainer .main h3, #homegridcontainer .main header h3 {
@@ -26,31 +23,28 @@ header h2, header #homegridcontainer .main h1, #homegridcontainer .main header h
   font-size: large;
 }
 
-header figure .logo {
-  background-image: url("images/Logo/logo/emblem_logo_96.png");
-  position: absolute;
-  top: 51px;
-  left: 20px;
+header #logo {
+  background-image: url("images/Logo/emblem_logo_96.png");
 }
 
 header .logotext {
   position: absolute;
-  top: 25px;
-  left: 115px;
+  top: 40px;
+  left: 100px;
   white-space: nowrap;
 }
 
 header ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  white-space: nowrap;
+  list-style: none;
   position: absolute;
   top: 0px;
-  right: 20px;
-  list-style: none;
+  right: 10px;
+  height: 1%;
 }
 
 header ul li {
+  display: inline-block;
   padding: 0.5rem;
 }
 
@@ -58,21 +52,10 @@ header ul li a {
   color: #236841;
 }
 
-@media (max-width: 600px) {
-  header ul {
-    position: absolute;
-    bottom: 10px;
-    left: 115px;
-  }
-  header ul a {
-    color: white;
-  }
-}
-
 #menubutton {
   position: absolute;
-  top: 75px;
-  right: 20px;
+  top: 115px;
+  left: 20px;
   list-style: none;
   text-decoration: none;
   text-align: center;
@@ -91,6 +74,21 @@ header ul li a {
   #menubutton {
     display: none;
   }
+}
+
+:focus {
+  outline: 3px dotted brown;
+}
+
+.skiplink {
+  position: absolute;
+  left: -10000px;
+}
+
+.skiplink:focus {
+  left: 10px;
+  top: 10px;
+  background-color: #E6DDCD;
 }
 
 footer {
@@ -126,26 +124,8 @@ footer p span {
   }
 }
 
-:focus {
-  outline: 2.5px dotted #481C34;
-}
-
-.skiplink {
-  position: absolute;
-  left: -10000px;
-}
-
-.skiplink:focus {
-  left: 10px;
-  top: 100px;
-  background-color: #B8B8A8;
-}
-
-h2, #homegridcontainer .main h1, #homegridcontainer .main h3 {
-  font-family: Parisian;
-}
-
 #homegridcontainer .main-pictures {
+  margin-top: 2rem;
   text-align: center;
 }
 
@@ -153,42 +133,28 @@ h2, #homegridcontainer .main h1, #homegridcontainer .main h3 {
   mix-blend-mode: darken;
 }
 
-#homegridcontainer .sidebar figure {
-  margin-left: 1rem;
-}
-
-#homegridcontainer .sidebar figure img {
-  max-width: 60%;
-}
-
-#homegridcontainer .sidebar .sidebar-feature1 {
-  width: 80%;
-}
-
-#homegridcontainer .sidebar .sidebar-feature1 a {
-  font-size: large;
-  color: #236841;
-}
-
-#homegridcontainer .sidebar .sidebar-feature1 a:hover {
-  font-weight: 600;
+#homegridcontainer .main-pictures img {
+  max-width: 30%;
 }
 
 #homegridcontainer .main h1 {
   text-align: center;
+  width: 100%;
+  white-space: nowrap;
+  position: absolute;
+  top: 33%;
+  left: 43%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   text-transform: uppercase;
-  margin-bottom: 2rem;
-  font-weight: 600;
 }
 
 #homegridcontainer .main h2, #homegridcontainer .main h1, #homegridcontainer .main h3 {
   margin: 1rem;
   margin-top: 2rem;
-  font-family: 'Parisian';
-}
-
-#homegridcontainer .main h3 {
-  font-family: Parisian;
+  white-space: nowrap;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 #homegridcontainer .main P {
@@ -203,12 +169,42 @@ h2, #homegridcontainer .main h1, #homegridcontainer .main h3 {
   width: 90%;
 }
 
+#homegridcontainer .media {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#homegridcontainer #sidebar figure {
+  margin-left: 1rem;
+}
+
+#homegridcontainer #sidebar figure img {
+  max-width: 60%;
+}
+
+#homegridcontainer #sidebar .sidebar-feature1 {
+  width: 80%;
+}
+
+#homegridcontainer #sidebar .sidebar-feature1 a {
+  font-size: large;
+  color: #236841;
+}
+
+#homegridcontainer #sidebar .sidebar-feature1 a:hover {
+  font-weight: 600;
+}
+
 #homegridcontainer header {
   grid-area: header;
 }
 
 #homegridcontainer .main-pictures {
   grid-area: main-pictures;
+}
+
+#homegridcontainer .main-pictures img {
+  mix-blend-mode: darken;
 }
 
 #homegridcontainer #navbar {
@@ -219,8 +215,12 @@ h2, #homegridcontainer .main h1, #homegridcontainer .main h3 {
   grid-area: main;
 }
 
-#homegridcontainer .sidebar {
+#homegridcontainer #sidebar {
   grid-area: sidebar;
+}
+
+#homegridcontainer #sidebar img {
+  mix-blend-mode: darken;
 }
 
 #homegridcontainer footer {
@@ -237,18 +237,21 @@ h2, #homegridcontainer .main h1, #homegridcontainer .main h3 {
 
 #homegridcontainer .media {
   grid-area: media;
+  margin-top: 2rem;
 }
 
-#homegridcontainer .selling {
+#homegridcontainer #selling {
   grid-area: selling;
+  margin-top: 2rem;
 }
 
-#homegridcontainer .buying {
+#homegridcontainer #buying {
   grid-area: buying;
 }
 
-#homegridcontainer .valuing {
+#homegridcontainer #valuing {
   grid-area: valuing;
+  width: 85%;
 }
 
 @media (max-width: 600px) {
@@ -258,13 +261,13 @@ h2, #homegridcontainer .main h1, #homegridcontainer .main h3 {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         grid-template-areas: "header" "main-pictures" "main" "navbar" "footer";
-    grid-gap: 1rem;
+    grid-gap: 1.8rem;
   }
   #homegridcontainer video {
     max-width: 90%;
   }
-  #homegridcontainer .main-pictures img {
-    mix-blend-mode: darken;
+  #homegridcontainer .media {
+    margin-top: 3rem;
   }
 }
 
@@ -283,6 +286,7 @@ h2, #homegridcontainer .main h1, #homegridcontainer .main h3 {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "intro intro" "buying sidebar" "valuing.";
+    grid-gap: 1rem;
   }
   #homegridcontainer #intro {
     display: -ms-grid;
@@ -292,16 +296,23 @@ h2, #homegridcontainer .main h1, #homegridcontainer .main h3 {
         grid-template-areas: "media selling";
     grid-gap: 1rem;
   }
+  #homegridcontainer .main h1 {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
   #homegridcontainer video {
     max-width: 90%;
   }
-  #homegridcontainer .sidebar {
+  #homegridcontainer #sidebar {
     text-align: center;
   }
-  #homegridcontainer .sidebar figure img {
+  #homegridcontainer #sidebar figure img {
     max-width: 30%;
   }
-  #homegridcontainer .sidebar .sidebar-feature1 {
+  #homegridcontainer #sidebar .sidebar-feature1 {
     margin-left: 2rem;
   }
 }
@@ -322,11 +333,11 @@ h2, #homegridcontainer .main h1, #homegridcontainer .main h3 {
         grid-template-areas: "intro intro intro" "buying valuing sidebar";
   }
   #homegridcontainer video {
+    margin-left: 1rem;
     max-width: 90%;
   }
-  #homegridcontainer .selling {
-    margin-top: 2rem;
-    width: 80%;
+  #homegridcontainer #selling {
+    width: 70%;
   }
 }
 
@@ -853,6 +864,7 @@ body {
 
 main {
   padding: 1rem;
+  margin-top: 2rem;
 }
 
 h1 {

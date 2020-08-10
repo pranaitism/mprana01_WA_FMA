@@ -1,53 +1,40 @@
 @mixin position-top-right {
     position: absolute;
-    top: 0px;
+    top: 10px;
     right: 20px;
 }
 
-@mixin position-top-left {
-    position: absolute;
-    top: 51px;
-    left: 20px;
-}
-
 header {
-    display: inline-flex;
-    padding: $large-padding;
+    margin-top: $large-margin;
+    //padding: $large-padding;
     h2 {
         font-family: Parisian;
         font-weight: 300;
         font-size: large;
     }
-    figure {
-        .logo {
-            background-image: url("images/Logo/logo/emblem_logo_96.png");
-            @include position-top-left;
-        }
+    #logo {
+        background-image: url("images/Logo/emblem_logo_96.png");
     }
     .logotext {
         position: absolute;
-        top: 25px;
-        left: 115px;
+        top: 40px;
+        left: 100px;
         white-space: nowrap;
     }
     ul {
-        display: flex;
-        @include position-top-right;
+        white-space: nowrap;
         @include bulletless-list;
         li {
+            display: inline-block;
             padding: $small-padding;
             a {
                 color: $brand-color;
             }
         }
-        @include mobile {
-            position: absolute;
-            bottom: 10px;
-            left: 115px;
-            a {
-                color: white;
-            }
-        }
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        height: 1%;
     }
 }
 
@@ -63,8 +50,8 @@ header {
 //}
 #menubutton {
     position: absolute;
-    top: 75px;
-    right: 20px;
+    top: 115px;
+    left: 20px;
     @include bulletless-list;
     @include no-underline-link;
     @include center-text;
@@ -79,4 +66,19 @@ header {
     @include desktop {
         display: none;
     }
+}
+
+:focus {
+    outline: 3px dotted brown;
+}
+
+.skiplink {
+    position: absolute;
+    left: -10000px;
+}
+
+.skiplink:focus {
+    left: 10px;
+    top: 10px;
+    background-color: $background-color;
 }
