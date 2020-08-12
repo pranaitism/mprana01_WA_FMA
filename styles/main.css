@@ -10,7 +10,7 @@
   src: url("/fonts/parisr.eot") format("eot");
   src: url("/fonts/parisr.svg") format("svg");
   src: url("/fonts/parisr.ttf") format("truetype");
-  src: local("/fonts/parisr.woff") format("woff");
+  src: url("/fonts/parisr.woff") format("woff");
 }
 
 header {
@@ -791,7 +791,7 @@ footer p span {
 }
 
 #deliverycontainer .deliveryinfo span {
-  line-height: 1;
+  line-height: 2;
 }
 
 #deliverycontainer header {
