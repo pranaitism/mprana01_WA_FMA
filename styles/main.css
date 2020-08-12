@@ -142,8 +142,8 @@ footer p span {
   width: 100%;
   white-space: nowrap;
   position: absolute;
-  top: 33%;
-  left: 43%;
+  top: 42%;
+  left: 45%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-transform: uppercase;
@@ -298,7 +298,7 @@ footer p span {
   }
   #homegridcontainer .main h1 {
     position: absolute;
-    top: 33%;
+    top: 41%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -791,7 +791,7 @@ footer p span {
 }
 
 #deliverycontainer .deliveryinfo span {
-  line-height: 2;
+  line-height: 1;
 }
 
 #deliverycontainer header {
